@@ -1,0 +1,799 @@
+[
+    {
+    "musical":"1776",
+    "songName":"Molasses to Rum",
+    "composers":["Sherman Edwards"],
+    "lyricist":["Sherman Edwards"]
+},
+    
+    {
+    "musical":"Avenue Q",
+    "songName":"I'm Not Wearing Underwear Today",
+    "composers":["Jeff Marx, Robert Lopez"],
+    "lyricist":["Jeff Marx, Robert Lopez"]
+},
+    
+    {
+    "musical":"Bells Are Ringing",
+    "songName":"Long Before I Knew You",
+    "composers":["Jule Styne"],
+    "lyricist":["Adolph Green"]
+},
+    
+    {
+    "musical":"Camelot",
+    "songName":"Camelot",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"Camelot",
+    "songName":"C'est Moi",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"Fiddler on the Roof",
+    "songName":"If I Were a Rich Man",
+    "composers":["Jerry Bock"],
+    "lyricist":["Sheldon Harnick"]
+},
+    
+    {
+    "musical":"Footloose",
+    "songName":"I Confess",
+    "composers":["Jim Steinman, Kenny Loggins, Dean Pitchford, Eric Carmen, Sammy Hagar, Tom Snow"],
+    "lyricist":["Jim Steinman, Kenny Loggins, Dean Pitchford, Eric Carmen, Sammy Hagar, Tom Snow"]
+},
+    
+    {
+    "musical":"HMS Pinafore",
+    "songName":"When You're Lying Awake",
+    "composers":["Sir Arthur Sullivan"],
+    "lyricist":["Sir Arthur Sullivan"]
+},
+    
+    {
+    "musical":"Joseph and the Amazing Technicolor Dreamcoat",
+    "songName":"Those Canaan Days",
+    "composers":["Andrew Lloyd Webber"],
+    "lyricist":["Tim Rice"]
+},
+    
+    {
+    "musical":"Les Misérables",
+    "songName":"Empty Chairs at Empty Tables",
+    "composers":["Claude-Michel Schönberg"],
+    "lyricist":["Herbert Kretzmer"]
+},
+    
+    {
+    "musical":"Man of La Mancha",
+    "songName":"The Impossible Dream",
+    "composers":["Mitch Leigh"],
+    "lyricist":["Joe Darion"]
+},
+    
+    {
+    "musical":"My Fair Lady",
+    "songName":"I've Grown Accustomed to Her Face",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"My Fair Lady",
+    "songName":"With a Little Bit of Luck",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"My Fair Lady",
+    "songName":"Get Me to the Church on Time",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"Oklahoma!",
+    "songName":"Oh, What a Beautiful Mornin'",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"Puttin' on the Ritz",
+    "songName":"Puttin' on the Ritz",
+    "composers":["Irving Berlin"],
+    "lyricist":["Irving Berlin"]
+},
+    
+    {
+    "musical":"Ragtime",
+    "songName":"Make Them Hear You",
+    "composers":["Stephen Flaherty"],
+    "lyricist":["Lynn Ahrens"]
+},
+    
+    {
+    "musical":"South Pacific",
+    "songName":"Some Enchanted Evening",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"The Music Man",
+    "songName":"Marian the Librarian",
+    "composers":["Meredith Willson"],
+    "lyricist":["Meredith Willson"]
+},
+    
+    {
+    "musical":"The Music Man",
+    "songName":"The Sadder But Wiser Girl",
+    "composers":["Meredith Willson"],
+    "lyricist":["Meredith Willson"]
+},
+    
+    {
+    "musical":"The Music Man",
+    "songName":"Ya Got Trouble",
+    "composers":["Meredith Willson"],
+    "lyricist":["Meredith Willson"]
+},
+    
+    {
+    "musical":"The Pirates of Penzance",
+    "songName":"I Am the Very Model",
+    "composers":["Sir Arthur Sullivan"],
+    "lyricist":["William Schwenck Gilbert"]
+},
+    
+    {
+    "musical":"Chicago",
+    "songName":"Class",
+    "composers":["John Kander"],
+    "lyricist":["Fred Ebb"]
+},
+    
+    {
+    "musical":"Mame",
+    "songName":"Bosom Buddies",
+    "composers":["Jerry Herman"],
+    "lyricist":["Jerry Herman"]
+},
+    
+    {
+    "musical":"Side Show",
+    "songName":"Who Will Love Me As I Am?",
+    "composers":["Henry Krieger"],
+    "lyricist":["Bill Russell"]
+},
+    
+    {
+    "musical":"Wicked",
+    "songName":"What Is This Feeling?",
+    "composers":["Stephen Schwartz"],
+    "lyricist":["Stephen Schwartz"]
+},
+    
+    {
+    "musical":"Aida",
+    "songName":"Elaborate Lives",
+    "composers":["Elton John"],
+    "lyricist":["Tim Rice"]
+},
+    
+    {
+    "musical":"Aida",
+    "songName":"Written in the Stars",
+    "composers":["Elton John"],
+    "lyricist":["Tim Rice"]
+},
+    
+    {
+    "musical":"Carousel",
+    "songName":"When the Children Are Asleep",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"I Love You, You're Perfect, Now Change",
+    "songName":"Marriage Tango",
+    "composers":["Jimmy Roberts"],
+    "lyricist":["Joe DiPietro"]
+},
+    
+    {
+    "musical":"Porgy and Bess",
+    "songName":"Bess, You is My Woman",
+    "composers":["George Gershwin"],
+    "lyricist":["Ira Gershwin"]
+},
+    
+    {
+    "musical":"The Last Five Years",
+    "songName":"The Next Ten Minutes",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"Victor/Victoria",
+    "songName":"Almost a Love Song",
+    "composers":["Henry Mancini"],
+    "lyricist":["Leslie Bricusse"]
+},
+    
+    {
+    "musical":"Guys and Dolls",
+    "songName":"Guys and Dolls",
+    "composers":["Frank Loesser"],
+    "lyricist":["Frank Loesser"]
+},
+    
+    {
+    "musical":"The Full Monty",
+    "songName":"You Rule My World",
+    "composers":["David Yazbek"],
+    "lyricist":["David Yazbek"]
+},
+    
+    {
+    "musical":"The Producers",
+    "songName":"We Can Do It",
+    "composers":["Mel Brooks"],
+    "lyricist":["Mel Brooks"]
+},
+    
+    {
+    "musical":"A Chorus Line",
+    "songName":"Nothing",
+    "composers":["Marvin Hamlisch"],
+    "lyricist":["Edward Kleban"]
+},
+    
+    {
+    "musical":"A Chorus Line",
+    "songName":"The Music and the Mirror",
+    "composers":["Marvin Hamlisch"],
+    "lyricist":["Edward Kleban"]
+},
+    
+    {
+    "musical":"A Little Night Music",
+    "songName":"The Miller's Son",
+    "composers":["Stephen Sondheim"],
+    "lyricist":["Stephen Sondheim"]
+},
+    
+    {
+    "musical":"A Little Night Music",
+    "songName":"Send in the Clowns",
+    "composers":["Stephen Sondheim"],
+    "lyricist":["Stephen Sondheim"]
+},
+    
+    {
+    "musical":"Beauty and the Beast",
+    "songName":"A Change in Me",
+    "composers":["Alan Menken"],
+    "lyricist":["Howard Ashman, Tim Rice"]
+},
+    
+    {
+    "musical":"Chicago",
+    "songName":"When You're Good to Mama",
+    "composers":["John Kander"],
+    "lyricist":["Fred Ebb"]
+},
+    
+    {
+    "musical":"Chicago",
+    "songName":"Roxie",
+    "composers":["John Kander"],
+    "lyricist":["Fred Ebb"]
+},
+    
+    {
+    "musical":"Cinderella",
+    "songName":"Stepsisters' Lament",
+    "composers":["Oscar Hammerstein II, Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II, Richard Rodgers"]
+},
+    
+    {
+    "musical":"Hairspray",
+    "songName":"I Can Hear the Bells",
+    "composers":["Marc Shaiman"],
+    "lyricist":["Marc Shaiman, Scott Wittman"]
+},
+    
+    {
+    "musical":"Hairspray",
+    "songName":"Miss Baltimore Crabs",
+    "composers":["Marc Shaiman"],
+    "lyricist":["Marc Shaiman, Scott Wittman"]
+},
+    
+    {
+    "musical":"Hairspray",
+    "songName":"Good Morning, Baltimore",
+    "composers":["Marc Shaiman"],
+    "lyricist":["Marc Shaiman, Scott Wittman"]
+},
+    
+    {
+    "musical":"Hercules (film)",
+    "songName":"I Won't Say (I'm in Love)",
+    "composers":["Alan Menken"],
+    "lyricist":["Alan Menken"]
+},
+    
+    {
+    "musical":"I Love You, You're Perfect, Now Change",
+    "songName":"Always a Bridesmaid",
+    "composers":["Jimmy Roberts"],
+    "lyricist":["Joe DiPietro"]
+},
+    
+    {
+    "musical":"I Love You, You're Perfect, Now Change",
+    "songName":"I Will Be Loved Tonight",
+    "composers":["Jimmy Roberts"],
+    "lyricist":["Joe DiPietro"]
+},
+    
+    {
+    "musical":"Les Misérables",
+    "songName":"I Dreamed a Dream",
+    "composers":["Claude-Michel Schönberg"],
+    "lyricist":["Herbert Kretzmer"]
+},
+    
+    {
+    "musical":"Les Misérables",
+    "songName":"On My Own",
+    "composers":["Claude-Michel Schönberg"],
+    "lyricist":["Herbert Kretzmer"]
+},
+    
+    {
+    "musical":"Mamma Mia!",
+    "songName":"The Winner Takes It All",
+    "composers":["Benny Andersson, Björn Ulvaeus"],
+    "lyricist":["Benny Andersson, Björn Ulvaeus"]
+},
+    
+    {
+    "musical":"Spamalot (Monty Python's)",
+    "songName":"Whatever Happened to My Part?",
+    "composers":["John Du Prez, Neil Innes, Eric Idle"],
+    "lyricist":["Eric Idle"]
+},
+    
+    {
+    "musical":"Spamalot (Monty Python's)",
+    "songName":"Find Your Grail",
+    "composers":["John Du Prez, Neil Innes, Eric Idle"],
+    "lyricist":["Eric Idle"]
+},
+    
+    {
+    "musical":"Spring Awakening",
+    "songName":"Mama Who Bore Me",
+    "composers":["Duncan Sheik"],
+    "lyricist":["Steven Sater"]
+},
+    
+    {
+    "musical":"Spring Awakening",
+    "songName":"The Dark I Know Well",
+    "composers":["Duncan Sheik"],
+    "lyricist":["Steven Sater"]
+},
+    
+    {
+    "musical":"The Last Five Years",
+    "songName":"Still Hurting",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"The Last Five Years",
+    "songName":"See I'm Smiling",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"The Last Five Years",
+    "songName":"When You Come Home to Me",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"The Last Five Years",
+    "songName":"I Can Do Better than That",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"Bye Bye Birdie",
+    "songName":"How Lovely to Be a Woman",
+    "composers":["Charles Strouse"],
+    "lyricist":["Lee Adams"]
+},
+    
+    {
+    "musical":"Bye Bye Birdie",
+    "songName":"One Boy",
+    "composers":["Charles Strouse"],
+    "lyricist":["Lee Adams"]
+},
+    
+    {
+    "musical":"Camelot",
+    "songName":"I Loved You Once in Silence",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"Camelot",
+    "songName":"The Simple Joys of Manhood",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"Fiddler on the Roof",
+    "songName":"Far from the Home I Love",
+    "composers":["Jerry Bock"],
+    "lyricist":["Sheldon Harnick"]
+},
+    
+    {
+    "musical":"Fiddler on the Roof",
+    "songName":"Matchmaker",
+    "composers":["Jerry Bock"],
+    "lyricist":["Sheldon Harnick"]
+},
+    
+    {
+    "musical":"Into the Woods",
+    "songName":"On the Steps of the Palace",
+    "composers":["Stephen Sondheim"],
+    "lyricist":["Stephen Sondheim"]
+},
+    
+    {
+    "musical":"Into the Woods",
+    "songName":"Children Will Listen",
+    "composers":["Stephen Sondheim"],
+    "lyricist":["Stephen Sondheim"]
+},
+    
+    {
+    "musical":"My Fair Lady",
+    "songName":"I Could Have Danced All Night",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"My Fair Lady",
+    "songName":"Show Me",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"My Fair Lady",
+    "songName":"Without You",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"My Fair Lady",
+    "songName":"Wouldn't It Be Loverly",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"My Fair Lady",
+    "songName":"Just You Wait",
+    "composers":["Frederic Loewe"],
+    "lyricist":["Alan Jay Lerner"]
+},
+    
+    {
+    "musical":"Oklahoma!",
+    "songName":"Many a New Day",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"Oklahoma!",
+    "songName":"Out of My Dreams",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"Oklahoma!",
+    "songName":"People Will Say We're in Love",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"Songs for a New World",
+    "songName":"Christmas Lullaby",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"Songs for a New World",
+    "songName":"The Flagmaker, 1775",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"Spamalot (Monty Python's)",
+    "songName":"The Song That Goes Like This",
+    "composers":["John Du Prez, Eric IdleNeil Innes"],
+    "lyricist":["Eric Idle"]
+},
+    
+    {
+    "musical":"Spring Awakening",
+    "songName":"Whispering",
+    "composers":["Duncan Sheik"],
+    "lyricist":["Steven Sater"]
+},
+    
+    {
+    "musical":"Sweeney Todd",
+    "songName":"Green Finch and Linnet Bird",
+    "composers":["Stephen Sondheim"],
+    "lyricist":["Stephen Sondheim"]
+},
+    
+    {
+    "musical":"Sweet Adeline",
+    "songName":"Why Was I Born?",
+    "composers":["Jerome Kern"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"The Apple Tree",
+    "songName":"Feelings",
+    "composers":["Jerry Bock"],
+    "lyricist":["Sheldon Harnick"]
+},
+    
+    {
+    "musical":"The Drowsy Chaperone",
+    "songName":"Bride's Lament",
+    "composers":["Lisa Lambert, Greg Morrison"],
+    "lyricist":["Lisa Lambert, Greg Morrison"]
+},
+    
+    {
+    "musical":"The Phantom of the Opera",
+    "songName":"Wishing You Were Somehow Here Again",
+    "composers":["Andrew Lloyd Webber"],
+    "lyricist":["Charles Hart, Richard Stilgoe"]
+},
+    
+    {
+    "musical":"The Pirates of Penzance",
+    "songName":"Poor Wand'ring One",
+    "composers":["Sir Arthur Sullivan"],
+    "lyricist":["William Schwenck Gilbert"]
+},
+    
+    {
+    "musical":"The Secret Garden",
+    "songName":"How Could I Ever Know?",
+    "composers":["Lucy Simon"],
+    "lyricist":["Marsha Norman"]
+},
+    
+    {
+    "musical":"The Sound of Music",
+    "songName":"Climb Ev'ry Mountain",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"The Sound of Music",
+    "songName":"The Sound of Music",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"The Sound of Music",
+    "songName":"Something Good",
+    "composers":["Richard Rodgers"],
+    "lyricist":["Oscar Hammerstein II"]
+},
+    
+    {
+    "musical":"Joseph and the Amazing Technicolor Dreamcoat",
+    "songName":"Close Every Door",
+    "composers":["Andrew Lloyd Webber"],
+    "lyricist":["Tim Rice"]
+},
+    
+    {
+    "musical":"Joseph and the Amazing Technicolor Dreamcoat",
+    "songName":"Any Dream Will Do",
+    "composers":["Andrew Lloyd Webber"],
+    "lyricist":["Tim Rice"]
+},
+    
+    {
+    "musical":"You're a Good Man, Charlie Brown",
+    "songName":"Beethoven Day",
+    "composers":["Clark Gesner"],
+    "lyricist":["Clark Gesner"]
+},
+    
+    {
+    "musical":"Les Misérables",
+    "songName":"Bring Him Home",
+    "composers":["Claude-Michel Schönberg"],
+    "lyricist":["Herbert Kretzmer"]
+},
+    
+    {
+    "musical":"Les Misérables",
+    "songName":"What Have I Done?",
+    "composers":["Claude-Michel Schönberg"],
+    "lyricist":["Herbert Kretzmer"]
+},
+    
+    {
+    "musical":"Les Misérables",
+    "songName":"Who Am I?",
+    "composers":["Claude-Michel Schönberg"],
+    "lyricist":["Herbert Kretzmer"]
+},
+    
+    {
+    "musical":"Songs for a New World",
+    "songName":"King of the World",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"Songs for a New World",
+    "songName":"She Cries",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"The Last Five Years",
+    "songName":"Nobody Needs to Know",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"The Last Five Years",
+    "songName":"Shiksa Goddess",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"The Last Five Years",
+    "songName":"Moving Too Fast",
+    "composers":["Jason Robert Brown"],
+    "lyricist":["Jason Robert Brown"]
+},
+    
+    {
+    "musical":"Fiddler on the Roof",
+    "songName":"Miracles of Miracles",
+    "composers":["Jerry Bock"],
+    "lyricist":["Sheldon Harnick"]
+},
+    
+    {
+    "musical":"Fiddler on the Roof",
+    "songName":"Miracle of Miracles",
+    "composers":["Jerry Bock"],
+    "lyricist":["Sheldon Harnick"]
+},
+    
+    {
+    "musical":"She Loves Me",
+    "songName":"Tonight at Eight",
+    "composers":["Jerry Bock"],
+    "lyricist":["Sheldon Harnick"]
+},
+    
+    {
+    "musical":"She Loves Me",
+    "songName":"Tango Tragiquej",
+    "composers":["Jerry Bock"],
+    "lyricist":["Sheldon Harnick"]
+},
+    
+    {
+    "musical":"Rent",
+    "songName":"One Song Glory",
+    "composers":["Jonathan Larson"],
+    "lyricist":["Jonathan Larson"]
+},
+    
+    {
+    "musical":"Rent",
+    "songName":"Your Eyes",
+    "composers":["Jonathan Larson"],
+    "lyricist":["Jonathan Larson"]
+},
+    
+    {
+    "musical":"Rent",
+    "songName":"What You Own",
+    "composers":["Jonathan Larson"],
+    "lyricist":["Jonathan Larson"]
+},
+    
+    {
+    "musical":"Tick, Tick… Boom!",
+    "songName":"Why",
+    "composers":["Jonathan Larson"],
+    "lyricist":["Jonathan Larson"]
+},
+    
+    {
+    "musical":"Tick, Tick… Boom!",
+    "songName":"30/90",
+    "composers":["Jonathan Larson"],
+    "lyricist":["Jonathan Larson"]
+},
+    
+    {
+    "musical":"Tick, Tick… Boom!",
+    "songName":"Sunday",
+    "composers":["Jonathan Larson"],
+    "lyricist":["Jonathan Larson"]
+},
+    
+    {
+    "musical":"The Secret Garden",
+    "songName":"A Bit of Earth",
+    "composers":["Lucy Simon"],
+    "lyricist":["Marsha Norman"]
+},
+    
+    {
+    "musical":"The Secret Garden",
+    "songName":"Winter's on the Wing",
+    "composers":["Lucy Simon"],
+    "lyricist":["Marsha Norman"]
+    }
+]
