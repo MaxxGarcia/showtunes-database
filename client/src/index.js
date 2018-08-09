@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+//ROUTER
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from "riddl-js";
+import App from './App';
+//STYLESHEETS
+import "./styles/stylesSmall.css";
+import "./styles/stylesMid.css";
+import "./styles/stylesBig.css";
 
 const globalState = {
     songForm:{
@@ -20,5 +26,9 @@ const globalState = {
 
 ReactDOM.render(
     <Provider globalState={globalState}>
-        <App />
-    </Provider>, document.getElementById('root'));
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>, 
+    document.getElementById('root')
+);
