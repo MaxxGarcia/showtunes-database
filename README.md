@@ -1,5 +1,1 @@
-intial message# showtunes-database
-
-This is ground control to Major Tom
-
-are you coming in?
+Showtunes Database is a website for finding musicals to perform that fit your voice!
