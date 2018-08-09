@@ -6,8 +6,8 @@ const songSchema = new Schema({
     voice: {type: String, require: true},
     musical: {type: String, require: true},
     anthBook: String,
-    composers: [String],
-    lyricists: [String],
+    Composer: [String],
+    Lyricist: [String],
     links: {
         spotify: String,
         youtube: String,

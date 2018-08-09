@@ -1,4 +1,4 @@
-[
+let database = [
     {
       "Voice": "Baritone/Bass",
       "Musical": "1776",
@@ -912,3 +912,12 @@
       "count": 0
     }
   ]
+
+  const myFunc = database.map((item, i) => {
+     item.Composer.split(",")
+     item.Lyricist.split(",")
+     return item
+  })
+
+
+  console.log(myFunc)
