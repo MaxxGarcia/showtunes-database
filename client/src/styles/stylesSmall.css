@@ -1,0 +1,69 @@
+@media only screen and (max-width: 766px) {
+    *{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0px;
+    }
+    html{
+        background: linear-gradient(to bottom, rgb(226, 226, 226), rgb(179, 179, 179));
+    }
+    #ShoDatImg{
+        margin: 5px;
+        width: 94%
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #searchBarDiv{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .searchBarBtn{
+        border: 1px solid black;
+        height: 22px;
+        background: linear-gradient(to left, lightgray, rgb(167, 167, 167));
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+    }
+    .searchBarBtn:hover{
+        background: linear-gradient(to right, gray, rgb(95, 95, 95));
+        color: white;
+        border-radius: 0px;
+    }
+
+
+    #aboutDiv{
+        margin: 8px;
+        background: linear-gradient(to left, orange, purple);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #aboutImgDiv{
+        width: 32%
+    }
+    #aboutTextDiv{
+        width: 64%;
+    }
+    #staffImg{
+        width: 100%;
+        margin-right: 6px;
+    }
+
+
+
+
+
+
+
+
+
+}
+
