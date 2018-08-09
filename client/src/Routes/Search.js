@@ -59,11 +59,25 @@ class Search extends Component {
         const { searchForm } = this.props
         return (
             <div className="adminWrapper">
+
                 <form onSubmit={e => this.props.handleSubmit(e, searchForm)}>
+                    <select name="partSelector" id="partSelector">
+                        <option value="">Solos</option>
+                        <option value="Soprano">Soprano</option>
+                        <option value="Mezzo">Mezzo</option>
+                        <option value="Alto">Alto</option>
+                        <option value="Tenor">Tenor</option>
+                        <option value="Baritone">Baritone</option>
+                        <option value="Bass">Bass</option>
+                    </select>
+
                     <input placeholder="Song Name" value={searchForm.song} onChange={this.props.handleChange} name="song" type="text" />
+                    
                     <button > search </button>
                 </form>
+
                 {this.props.iframe}
+
             </div>
         );
     }
