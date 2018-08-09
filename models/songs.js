@@ -17,8 +17,12 @@ const songSchema = new Schema({
 
     },
     picture: String,
-    clicked: Number
-
+    clicked: Number,
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true
+    }
 });
 
 module.exports = mongoose.model("Showtunes", songSchema)
