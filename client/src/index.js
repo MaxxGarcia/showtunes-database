@@ -8,6 +8,8 @@ import App from './App';
 import "./styles/stylesSmall.css";
 import "./styles/stylesMid.css";
 import "./styles/stylesBig.css";
+import "./styles/ads.css";
+import "./styles/footer.css";
 
 const globalState = {
     songForm:{
