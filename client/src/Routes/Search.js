@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { connect } from "riddl-js";
 import axios from "axios";
 import qs from "qs";
+import Footer from '../Footer.js'
+
 const url = "https://accounts.spotify.com/api/token";
+
 const config = {
     method: "POST",
     url,
@@ -32,6 +35,7 @@ const handleSubmit = (e, searchForm) => setGlobalState => {
         let token = { Authorization: `Bearer ${response.data.access_token}` }
         axios.get(`https://api.spotify.com/v1/search?q=${songName}&type=track`, { headers: token })
             .then(response => {
+                console.log(response.data)
                 let albumId = `https://open.spotify.com/embed?uri=spotify:album:${response.data.tracks.items[0].album.id}`;
                 setGlobalState({ 
                     iframe: <iframe title={response.data} src={albumId} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>, 
@@ -77,6 +81,7 @@ class Search extends Component {
                 </form>
 
                 {this.props.iframe}
+                <Footer />
 
             </div>
         );
