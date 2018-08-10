@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import {connect} from "riddl-js"
 import { Switch, Route} from 'react-router-dom';
-
+import axios from "axios";
 import Navbar from "./Routes/Navbar"
 import AdminPortal from "./Routes/AdminPortal";
 import Search from "./Routes/Search";
@@ -10,6 +11,32 @@ import SearchBar from "./Routes/SearchBar.js"
 import titleImg from "./images/showtuneDatabase.png"
 
 class App extends Component {
+  componentDidMount(){
+    axios.get("/songs").then(response => {
+        let allComposers = []
+        let allLyricists = []
+        let allMusicals = []
+        let allVoices = []
+        response.data.forEach(item => {
+            item.Composer.forEach(composer => {
+                return allComposers.includes(composer) ? null : allComposers.push(composer)
+            })
+            item.Lyricist.forEach(lyricist => {
+               return allLyricists.includes(lyricist) ? null : allLyricists.push(lyricist)
+            })
+            return allVoices.includes(item.Voice) ? null : allVoices.push(item.Voice) && allMusicals.includes(item.Musical) ? null : allMusicals.push(item.Musical)
+            
+            
+        })
+        this.props.setGlobalState({
+            songData: response.data,
+            composers: allComposers,
+            lyricists: allLyricists,
+            musicals: allMusicals,
+            voices: allVoices
+        })
+    })
+}
   render() {
     return (
       <div className="appWrapper">
@@ -31,4 +58,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(App, null, {});

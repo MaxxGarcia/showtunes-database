@@ -19,9 +19,17 @@ const globalState = {
         clicked: 0
     },
     searchForm:{
-        song: ""
+        voice: '',
+        composer: '',
+        lyricist: '',
+        show: ''
     },
-    iframe: ""
+    iframe: "",
+    songData: [],
+    composers: [],
+    lyricists: [],
+    musicals: [],
+    voices: [],
 }
 
 ReactDOM.render(

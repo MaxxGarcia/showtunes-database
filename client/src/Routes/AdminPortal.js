@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from "riddl-js";
 import axios from "axios";
-// import { handleChange, handleSubmit } from "./transmitters.js"
 
 const handleChange = (e) => setGlobalState => {
     const {name, value} = e.target;
