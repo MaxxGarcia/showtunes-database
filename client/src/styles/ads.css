@@ -1,0 +1,19 @@
+.AdsDiv{
+    margin: 3px;
+    width: 20%;
+    border: 1px solid rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.adsDivAds{
+    margin: 1px;
+    height: 22%;
+    width: 94%;
+    border: 1px solid red;
+}
+.adsDivAds:hover{
+    box-shadow: orange 2px 2px 2px;
+    background: linear-gradient(to right, lightgray, rgb(163, 163, 163))
+}
