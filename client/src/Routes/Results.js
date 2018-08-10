@@ -2,7 +2,8 @@ import React from 'react'
 import Footer from '../Footer.js';
 import Ads from '../Ads.js';
 
-function Results() {
+function Results(props) {
+    console.log(this.props)
     return (
         <div id="resultsDiv">
             <div id="songInfoDiv">

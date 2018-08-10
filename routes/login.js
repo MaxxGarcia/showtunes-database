@@ -11,9 +11,9 @@ authRouter.post("/", (req, res) => {
         } else {
             admin.checkPassword(req.body.password, (err, match) => {
                 if (err) throw (err);
-                if (!match) res.status(401).send({success: false, message:"incorrect username or password combination"});
+                if (!match) return res.status(401).send({success: false, message:"incorrect username or password combination"});
                 const token = jwt.sign(admin.toObject(), process.env.SECRET, {expiresIn: "24h"});
-                res.send({token: token, admin: admin.withoutPassword(), success: true, message: "Token Received"})
+                return res.send({token: token, admin: admin.withoutPassword(), success: true, message: "Token Received"})
             })
         }
     });
