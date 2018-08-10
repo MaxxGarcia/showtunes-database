@@ -54,38 +54,58 @@ const handleSubmit = (e, searchForm) => setGlobalState => {
 class Search extends Component {
     constructor() {
         super();
-        this.state = {}
-
-
+        this.state = {
+                selectedComposer: '',
+                selectedLyricist: '',
+                selectedShow: '',
+                selectedVoice: ''
+        }
+        this.handleChange = this.handleChange.bind(this);
     }
-
+    handleChange(e){
+        this.setState({[e.target.name]: e.target.value})
+    }
     render() {
-        const { searchForm } = this.props
+        const {composers, lyricists, musicals, voices } = this.props
         return (
             <div className="adminWrapper">
 
-                <form onSubmit={e => this.props.handleSubmit(e, searchForm)}>
-                    <select name="partSelector" id="partSelector">
-                        <option value="">Solos</option>
-                        <option value="Soprano">Soprano</option>
-                        <option value="Mezzo">Mezzo</option>
-                        <option value="Alto">Alto</option>
-                        <option value="Tenor">Tenor</option>
-                        <option value="Baritone">Baritone</option>
-                        <option value="Bass">Bass</option>
-                    </select>
+                <form >
+                    <input placeholder="Voice" type="text" name="selectedVoice" list="voiceName" value={this.state.name} onChange={this.handleChange} />
+                    <datalist id="voiceName">
+                        {voices.map((voice, i) => {
+                            return <option value={voice} key={voice + i}> {voice} </option>
+                        })}
+                    </datalist>
 
-                    <input placeholder="Song Name" value={searchForm.song} onChange={this.props.handleChange} name="song" type="text" />
-                    
-                    <button > search </button>
+
+                    <input placeholder="Composers" type="text" name="selectedComposer" list="composerName" value={this.state.name} onChange={this.handleChange} />
+                    <datalist id="composerName">
+                        {composers.map((composer, i) => {
+                            return <option value={composer} key={composer + i}> {composer} </option>
+                        })}
+                    </datalist>
+
+                    <input placeholder="Lyricists" type="text" name="selectedLyricist" list="lyricistName" value={this.state.name} onChange={this.handleChange}/>
+                    <datalist id="lyricistName">
+                        {lyricists.map((lyricist, i) => {
+                            return <option value={lyricist} key={lyricist + i}> {lyricist} </option>
+                        })}
+                    </datalist>
+
+                    <input placeholder="Shows" type="text" name="selectedShow" list="showName" value={this.state.name} onChange={this.handleChange}/>
+                    <datalist id="showName">
+                        {musicals.map((show, i) => {
+                            return <option value={show} key={show + i}> {show} </option>
+                        })}
+                    </datalist>
+                    <button> search </button>
                 </form>
-
                 {this.props.iframe}
                 <Footer />
-
             </div>
         );
     }
 }
 
-export default connect(Search, null, { handleChange, handleSubmit });
+export default connect(Search, null, { });
