@@ -9,6 +9,7 @@ import Home from "./Routes/Home";
 import Results from "./Routes/Results"
 import SearchBar from "./Routes/SearchBar.js"
 import titleImg from "./images/showtuneDatabase.png"
+import songProfile from "./Routes/SongProfile"
 
 class App extends Component {
   componentDidMount(){
@@ -24,9 +25,7 @@ class App extends Component {
             item.Lyricist.forEach(lyricist => {
                return allLyricists.includes(lyricist) ? null : allLyricists.push(lyricist)
             })
-            return allVoices.includes(item.Voice) ? null : allVoices.push(item.Voice) && allMusicals.includes(item.Musical) ? null : allMusicals.push(item.Musical)
-            
-            
+            return allVoices.includes(item.Voice) ? null : allVoices.push(item.Voice) && allMusicals.includes(item.Musical) ? null : allMusicals.push(item.Musical)  
         })
         this.props.setGlobalState({
             songData: response.data,
@@ -40,17 +39,16 @@ class App extends Component {
   render() {
     return (
       <div className="appWrapper">
-        <div className="headerDiv">
           <img src={titleImg} id="ShoDatImg" alt="Showtunes Database"/>
           <Navbar />
           <SearchBar />
-        </div>
         <div className="bodyDiv">
           <Switch>
             <Route exact path='/' component={ Home }/>
             <Route path='/Search' component = { Search }/>
-            <Route path='/results' component={ Results }/>
             <Route path='/AdminPortal' component={ AdminPortal }/>
+            <Route path={`/results/:searchType/:searchTerm`} component={Results} />
+            <Route path={`/songprofile/:searchTerm`} component={songProfile} />
           </Switch>
         </div>
       </div>

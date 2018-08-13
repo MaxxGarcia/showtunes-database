@@ -1,27 +1,27 @@
 @media only screen and (max-width: 766px) {
-    *{
+    * {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         margin: 0px;
     }
-    html{
+    html {
         background: linear-gradient(to bottom, rgb(226, 226, 226), rgb(179, 179, 179));
     }
-    #ShoDatImg{
+    #ShoDatImg {
         margin: 5px;
         width: 94%
     }
-    .navbar{
+    .navbar {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
+    #searchBarDiv {
+        justify-content: space-evenly;
+        position: relative;
+        top: 0;
 
-    #searchBarDiv{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
     }
-    .searchBarBtn{
+    .searchBarBtn {
         border: 1px solid black;
         height: 22px;
         background: linear-gradient(to left, lightgray, rgb(167, 167, 167));
@@ -31,14 +31,12 @@
         align-items: center;
         border-radius: 6px;
     }
-    .searchBarBtn:hover{
+    .searchBarBtn:hover {
         background: linear-gradient(to right, gray, rgb(95, 95, 95));
         color: white;
         border-radius: 0px;
     }
-
-
-    #aboutDiv{
+    #aboutDiv {
         margin: 8px;
         background: linear-gradient(to left, orange, purple);
         display: flex;
@@ -46,41 +44,38 @@
         justify-content: space-around;
         align-items: center;
     }
-    #aboutImgDiv{
+    #aboutImgDiv {
         width: 32%
     }
-    #aboutTextDiv{
+    #aboutTextDiv {
         width: 64%;
     }
-    #staffImg{
+    #staffImg {
         width: 100%;
         margin-right: 6px;
     }
-    #homeBodyDiv{
+    #homeBodyDiv {
         display: flex;
         flex-direction: row;
     }
-
-
-
     /* RESULTS */
-    #songInfoDiv{
+    #songInfoDiv {
         margin: 4px;
         width: 92%;
         border: solid rebeccapurple 2px;
         background: linear-gradient(to bottom, pink, palegreen);
     }
-    #popularityGraphDiv{
+    #popularityGraphDiv {
         background: white;
     }
-    #resultsBodyDiv{
+    #resultsBodyDiv {
         display: flex;
         flex-direction: row;
     }
-    #lyricsH3{
+    #lyricsH3 {
         text-align: center;
     }
-    #resultsLyricsDiv{
+    #resultsLyricsDiv {
         height: 166px;
         margin: 2px;
         background: linear-gradient(to right, rgb(75, 75, 75), rgb(134, 134, 134));
@@ -89,16 +84,16 @@
         flex-direction: column;
         justify-content: space-around;
     }
-    #recDiv1{
+    #recDiv1 {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    #recDiv2{
+    #recDiv2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .recommendation{
+    .recommendation {
         margin: 3px;
         width: 1fr;
         height: 60px;
@@ -108,15 +103,7 @@
         justify-content: center;
         align-items: center;
     }
-
-    border: red 1px solid;
+    .resultsWrapper{
+        border: solid black 1px;
+    }
 }
-
-
-
-
-
-
-
-}
-
