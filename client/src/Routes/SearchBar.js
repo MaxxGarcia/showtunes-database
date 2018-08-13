@@ -82,6 +82,7 @@ class SearchBar extends Component {
                     </div>
                     <button>ADVANCED SEARCH</button>
                 </div>
+                <button className="searchBarBtn">ADVANCED SEARCH</button>
             </div>
         )
     }
