@@ -20,6 +20,7 @@ class SearchBar extends Component {
         console.log(name)
         this.setState(prevState => ({ [name]: prevState[name] === "none" ? "block" : "none" }))
     }
+    
     render() {
         console.log(this.props)
 
@@ -60,7 +61,7 @@ class SearchBar extends Component {
                 <div className="searchBarBtn">
                     <p>Random Song</p>
                 </div>
-                <button>ADVANCED SEARCH</button>
+                <button className="searchBarBtn">ADVANCED SEARCH</button>
                 <Switch>
                     <Route path={`${this.props.match.url}/:searchTerm`} component={Results} />
                 </Switch>
