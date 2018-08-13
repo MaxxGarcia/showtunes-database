@@ -40,10 +40,10 @@ class App extends Component {
   render() {
     return (
       <div className="appWrapper">
+        <img src={titleImg} id="ShoDatImg" alt="Showtunes Database"/>
+        <SearchBar />
+        <Navbar />
         <div className="headerDiv">
-          <img src={titleImg} id="ShoDatImg" alt="Showtunes Database"/>
-          <Navbar />
-          <SearchBar />
         </div>
         <div className="bodyDiv">
           <Switch>
