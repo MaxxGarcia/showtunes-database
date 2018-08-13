@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from "riddl-js"
 import { Link } from "react-router-dom"
 
-
 class Results extends Component {
     constructor() {
         super();
