@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import { connect } from "riddl-js";
 import axios from "axios";
 
-const handleChange = (e) => setGlobalState => {
-    const { name, value } = e.target;
-    setGlobalState(prevState => (
-        {
-            searchForm: { ...prevState.songForm, [name]: value }
-        }
-    ))
-}
 const handleSubmit = (e, searchForm) => setGlobalState => {
     e.preventDefault()
     const songName = searchForm.song.split(" ").map((word, i) => {
