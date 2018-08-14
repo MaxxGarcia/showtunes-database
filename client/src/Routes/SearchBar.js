@@ -17,13 +17,13 @@ class SearchBar extends Component {
     handleClick(e) {
         console.log(e.target.value)
         let name = (e.target.value)
-        this.setState( prevState => ({
+        this.setState( {
             Voice: "none",
             Composer: "none",
             Lyricist: "none",
             Shows: "none",
 
-        }))
+        })
         this.setState(prevState => ({ [name]: prevState[name] === "block" }))
     }
     handleNutral() {
