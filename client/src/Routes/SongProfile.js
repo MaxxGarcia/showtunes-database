@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Footer from '../Footer.js';
 import Ads from '../Ads.js';
 import { connect } from "riddl-js"
 import axios from "axios";
@@ -75,7 +74,6 @@ class SongProfile extends Component {
                         <div className="recommendation">Recommended Song</div>
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }
