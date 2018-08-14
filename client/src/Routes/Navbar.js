@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <div className='navbar'>
             <Link to='/' id='Home'>Home</Link>
-            <Link to='/Search' id='Search'>Advanced Search</Link>
+            <Link to='/AdvancedSearch' id='AdvancedSearch'>AdvancedSearch</Link>
             {/* <Link to='/Results' id='Results'>Results</Link> */}
             <Link to='/AdminPortal' id='AdminPortal'>Admin Portal</Link>
         </div>
