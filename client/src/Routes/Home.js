@@ -1,7 +1,6 @@
 import React from 'react'
 import staff from '../images/staff.png'
 import Ads from '../Ads.js'
-import Footer from '../Footer.js'
 
 function Home() {
     return (
@@ -13,8 +12,7 @@ function Home() {
                 <div id="aboutTextDiv">
                     <p id="aboutText">
                         Looking for your next audition song?<br/>
-                        ShoDat helps you find the perfect song
-                        for your next audition!
+                        The bran-new Showtune Database makes finding the perfect song easy.  Spend less time hunting for your song and more rehearsing!
                     </p>
                 </div>
             </div>
@@ -49,7 +47,6 @@ function Home() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam alias quia sed repellendus recusandae sit adipisci vero fugit in. Fugit nam iusto, dolor nobis blanditiis aperiam qui cum rem perferendis?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptatem voluptate libero repellat corrupti hic, repudiandae vel earum, amet atque maiores qui culpa nobis in distinctio totam fuga tempore iusto?
             </p>
-            <Footer />
         </div>
     )
 }

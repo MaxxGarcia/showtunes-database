@@ -40,24 +40,21 @@ class SearchBar extends Component {
             <div id="stickyDiv">
                 <div id="searchBarDiv">
                     <button value="Voice"className="searchBarBtn" onMouseEnter={this.handleClick}>
-                        Voice
-                    </button>
-
-                    <button value="Composer" className="searchBarBtn" onMouseEnter={this.handleClick}>
-                        Composer
-                    </button>
-
-                    <button value="Lyricist" className="searchBarBtn" onMouseEnter={this.handleClick}>
-                        Lyricist
-                    </button>
+                        Voice</button>
 
                     <button value="Shows" className="searchBarBtn" onMouseEnter={this.handleClick}>
-                        Shows
-                    </button>
+                        Musical</button>
+                        
+                    <button value="Composer" className="searchBarBtn" onMouseEnter={this.handleClick}>
+                        Composer</button>
 
-                    <button className="searchBarBtn">
-                        <p>Random Song</p>
-                    </button>
+                    <button value="Lyricist" className="searchBarBtn" onMouseEnter={this.handleClick}>
+                        Lyricist</button>
+
+
+                    {/* <button className="searchBarBtn lastTwo">Advanced Search</button>
+                    <button className="searchBarBtn lastTwo">Random Song</button> */}
+
                     <div className="options">
                         <div className="BIG" style={{ display: this.state.Voice }}>
                             {this.props.voices.map((voice, i) => {
@@ -80,9 +77,8 @@ class SearchBar extends Component {
                             })}
                         </div>
                     </div>
-                    <button>ADVANCED SEARCH</button>
+                    {/* <button>ADVANCED SEARCH</button> */}
                 </div>
-                <button className="searchBarBtn">ADVANCED SEARCH</button>
             </div>
         )
     }

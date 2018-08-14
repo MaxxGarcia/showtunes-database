@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from "riddl-js"
-import { Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import axios from "axios";
 import Navbar from "./Routes/Navbar"
+import Footer from "./Footer";
 import AdminPortal from "./Routes/AdminPortal";
 import AdvancedSearch from "./Routes/AdvancedSearch";
 import Home from "./Routes/Home";
@@ -10,6 +11,7 @@ import Results from "./Routes/Results"
 import SearchBar from "./Routes/SearchBar.js"
 import titleImg from "./images/showtuneDatabase.png"
 import songProfile from "./Routes/SongProfile"
+
 
 class App extends Component {
   componentDidMount(){
@@ -37,11 +39,21 @@ class App extends Component {
     })
 }
   render() {
+// const {location: {pathname}} = props;
+
     return (
       <div className="appWrapper">
+        {console.log(this.props)}
         <img src={titleImg} id="ShoDatImg" alt="Showtunes Database"/>
-        <SearchBar />
+        {/* {pathname === "/" && 
+                <div id="aboutTextDiv">
+                    <p id="aboutText">
+                        Looking for your next audition song?<br/>
+                        The bran-new Showtune Database makes finding the perfect song easy.  Spend less time hunting for your song and more rehearsing!
+                    </p>
+                </div>} */}
         <Navbar />
+        <SearchBar />
         <div className="headerDiv">
         </div>
         <div className="bodyDiv">
@@ -52,6 +64,7 @@ class App extends Component {
             <Route path={`/results/:searchType/:searchTerm`} component={Results} />
             <Route path={`/songprofile/:searchTerm`} component={songProfile} />
           </Switch>
+          <Footer />
         </div>
       </div>
     );
