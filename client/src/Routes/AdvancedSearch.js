@@ -114,7 +114,16 @@ class AdvancedSearch extends Component {
                             return <option value={show} key={show + i}> {show} </option>
                         })}
                     </datalist>
-                    <button> search </button>
+                    <img src={microphone} id="microphoneImg" alt="microphone"/>
+                    <button id="advSearchBtn">
+                                              <p id="p1">S</p>
+                                              <p id="p2">E</p>
+                                              <p id="p3">A</p>
+                                              <p id="p4">R</p>
+                                              <p id="p5">C</p>
+                                              <p id="p6">H</p>
+                                              {/* <p>SEARCH</p> */}
+                                              </button>
                 </form>
                 <AdvancedResults />
                 <Footer />
