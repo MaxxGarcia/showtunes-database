@@ -32,6 +32,7 @@ const globalState = {
     lyricists: [],
     musicals: [],
     voices: [],
+    queryObject: {},
 }
 
 ReactDOM.render(
