@@ -5,9 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from "riddl-js";
 import App from './App';
 //STYLESHEETS
-import "./styles/stylesSmall.css";
-import "./styles/stylesMid.css";
 import "./styles/stylesBig.css";
+import "./styles/stylesMid.css";
+import "./styles/stylesSmall.css";
 import "./styles/ads.css";
 import "./styles/footer.css";
 
