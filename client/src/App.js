@@ -5,7 +5,7 @@ import axios from "axios";
 import Navbar from "./Routes/Navbar"
 import Footer from "./Footer";
 import AdminPortal from "./Routes/AdminPortal";
-import Search from "./Routes/Search";
+import AdvancedSearch from "./Routes/AdvancedSearch";
 import Home from "./Routes/Home";
 import Results from "./Routes/Results"
 import SearchBar from "./Routes/SearchBar.js"
@@ -59,7 +59,7 @@ class App extends Component {
         <div className="bodyDiv">
           <Switch>
             <Route exact path='/' component={ Home }/>
-            <Route path='/Search' component = { Search }/>
+            <Route path={`/AdvancedSearch`} component = { AdvancedSearch }/>
             <Route path='/AdminPortal' component={ AdminPortal }/>
             <Route path={`/results/:searchType/:searchTerm`} component={Results} />
             <Route path={`/songprofile/:searchTerm`} component={songProfile} />
@@ -71,4 +71,4 @@ class App extends Component {
   }
 }
 
-export default connect(App, null, {});
+export default connect(App, state => state, {});
