@@ -3,6 +3,7 @@ import { connect } from "riddl-js";
 import Footer from '../Footer.js'
 import AdvancedResults from "./AdvancedResults"
 import axios from "axios";
+import microphone from "../images/microphone.png"
 
 class AdvancedSearch extends Component {
 

@@ -15,16 +15,14 @@ class SearchBar extends Component {
         this.handleNutral = this.handleNutral.bind(this)
     }
     handleClick(e) {
-        console.log(e.target.value)
         let name = (e.target.value)
-        this.setState( {
-            Voice: "none",
+        this.setState( prevState => ({
+            Voice:  "none",
             Composer: "none",
             Lyricist: "none",
             Shows: "none",
-
-        })
-        this.setState(prevState => ({ [name]: prevState[name] === "block" }))
+            [name]: prevState[name] === "block" ?  "none": "block"
+        }))
     }
     handleNutral() {
         this.setState({
@@ -39,26 +37,26 @@ class SearchBar extends Component {
         return (
             <div id="stickyDiv">
                 <div id="searchBarDiv">
-                    <button value="Voice"className="searchBarBtn" onMouseEnter={this.handleClick}>
+                    <button value="Voice"className="searchBarBtn" onClick={this.handleClick}>
                         Voice</button>
 
-                    <button value="Shows" className="searchBarBtn" onMouseEnter={this.handleClick}>
+                    <button value="Shows" className="searchBarBtn" onClick={this.handleClick}>
                         Musical</button>
                         
-                    <button value="Composer" className="searchBarBtn" onMouseEnter={this.handleClick}>
+                    <button value="Composer" className="searchBarBtn" onClick={this.handleClick}>
                         Composer</button>
 
-                    <button value="Lyricist" className="searchBarBtn" onMouseEnter={this.handleClick}>
+                    <button value="Lyricist" className="searchBarBtn" onClick={this.handleClick}>
                         Lyricist</button>
 
 
                     {/* <button className="searchBarBtn lastTwo">Advanced Search</button>
                     <button className="searchBarBtn lastTwo">Random Song</button> */}
-
+                    
                     <div className="options">
                         <div className="BIG" style={{ display: this.state.Voice }}>
                             {this.props.voices.map((voice, i) => {
-                                return <Link onClick={this.handleNutral} to={`/results/Voice/${voice}`} key={voice + i}> {voice} </Link>
+                                return <Link onClick={this.handleNutral} to={`/results/Voice/${voice}`} key={voice + i} className=""> {voice} </Link>
                             })}
                         </div>
                         <div className="BIG" style={{ display: this.state.Composer }}>
