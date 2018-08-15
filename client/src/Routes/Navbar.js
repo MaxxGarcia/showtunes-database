@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 function Navbar() {
     return (
         <div className='navbar'>
-            <Link to='/' id='Home'>Home</Link>
-            <Link to='/AdvancedSearch' id='AdvancedSearch'>AdvancedSearch</Link>
-            {/* <Link to='/Results' id='Results'>Results</Link> */}
-            <Link to='/AdminPortal' id='AdminPortal'>Admin Portal</Link>
+            <Link className="navBtn" to='/' id='Home'>Home</Link>
+            <Link className="navBtn"to='/AdvancedSearch' id='AdvancedSearch'>AdvancedSearch</Link>
+            {/* <Link  className="navBtn" to='/Results' id='Results'>Results</Link> */}
+            <Link  className="navBtn" to='/AdminPortal' id='AdminPortal'>Admin Portal</Link>
         </div>
     )
 }
