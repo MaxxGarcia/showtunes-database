@@ -48,34 +48,40 @@ class SearchBar extends Component {
 
                     <button value="Lyricist" className="searchBarBtn" onClick={this.handleClick}>
                         Lyricist</button>
+                </div>
 
 
                     {/* <button className="searchBarBtn lastTwo">Advanced Search</button>
                     <button className="searchBarBtn lastTwo">Random Song</button> */}
-                    
-                    <div className="options">
-                        <div className="BIG" style={{ display: this.state.Voice }}>
-                            {this.props.voices.map((voice, i) => {
-                                return <Link onClick={this.handleNutral} to={`/results/Voice/${voice}`} key={voice + i} className=""> {voice} </Link>
-                            })}
-                        </div>
-                        <div className="BIG" style={{ display: this.state.Composer }}>
-                            {this.props.composers.map((composer, i) => {
-                                return <Link onClick={this.handleNutral} to={`/results/Composer/${composer}`} key={composer + i}> {composer} </Link>
-                            })}
-                        </div>
-                        <div className="BIG" style={{ display: this.state.Lyricist }}>
-                            {this.props.lyricists.map((lyricist, i) => {
-                                return <Link onClick={this.handleNutral} to={`/results/Lyricist/${lyricist}`} key={lyricist + i}> {lyricist} </Link>
-                            })}
-                        </div>
-                        <div className="BIG" style={{ display: this.state.Shows }}>
-                            {this.props.musicals.map((show, i) => {
-                                return <Link onClick={this.handleNutral} to={`/results/Musical/${show}`} key={show + i}> {show} </Link>
-                            })}
-                        </div>
+                <div className="options">
+                    <div className="BIG" style={{ display: this.state.Voice }}>
+                        {this.props.voices.map((voice, i) => {
+                            return <Link onClick={this.handleNutral} 
+                                         className="searchResultLink"
+                                         to={`/results/Voice/${voice}`} 
+                                         key={voice + i}> {voice} </Link>})}
                     </div>
-                    {/* <button>ADVANCED SEARCH</button> */}
+                    <div className="BIG" style={{ display: this.state.Composer }}>
+                        {this.props.composers.map((composer, i) => {
+                            return <Link onClick={this.handleNutral} 
+                                         className="searchResultLink"
+                                         to={`/results/Composer/${composer}`} 
+                                         key={composer + i}> {composer} </Link>})}
+                    </div>
+                    <div className="BIG" style={{ display: this.state.Lyricist }}>
+                        {this.props.lyricists.map((lyricist, i) => {
+                            return <Link onClick={this.handleNutral} 
+                                         className="searchResultLink"
+                                         to={`/results/Lyricist/${lyricist}`} 
+                                         key={lyricist + i}> {lyricist} </Link>})}
+                    </div>
+                    <div className="BIG" style={{ display: this.state.Shows }}>
+                        {this.props.musicals.map((show, i) => {
+                            return <Link onClick={this.handleNutral} 
+                                         className="searchResultLink"
+                                         to={`/results/Musical/${show}`} 
+                                         key={show + i}> {show} </Link>})}
+                    </div>
                 </div>
             </div>
         )

@@ -12,15 +12,17 @@ class AdvanceResults extends Component {
     }
     render() {
         return (
-            <div>
-                {this.props.advancedData && this.props.advancedData.map((song, i) => {
-                    return (
-                        <Link to={`/songprofile/${song._id}`} key={song + i} className="resultWrapper">
-                            <div>{song.Song} - {song.Musical} </div>
-                        </Link>
-                    )
-                })
-                }
+            <div id="hiThisIsTheDiv">
+                <div id="resultWrapperDiv">
+                    {this.props.advancedData && this.props.advancedData.map((song, i) => {
+                        return (
+                            <Link to={`/songprofile/${song._id}`} key={song + i} className="resultLink">
+                                <div id="songAndMusical">{song.Song} - {song.Musical} </div>
+                            </Link>
+                        )
+                    })
+                    }
+                </div>
             </div>
         )
     }
