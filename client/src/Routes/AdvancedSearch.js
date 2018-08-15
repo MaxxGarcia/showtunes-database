@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "riddl-js";
 import Footer from '../Footer.js'
-import AdvancedResults from "./AdvancedResults"
+import AdvancedResults from "./AdvancedResults";
+import microphone from "../images/microphone.png";
 import axios from "axios";
 
 class AdvancedSearch extends Component {
@@ -84,49 +85,58 @@ class AdvancedSearch extends Component {
     render() {
         const { composers, lyricists, musicals, voices } = this.props
         return (
-            <div className="adminWrapper">
-                <form onSubmit={this.handleSubmit}>
-                    <input placeholder={this.props.queryObject.Voice ? this.state.Voice : "Voice"} type="text" name="Voice" list="voiceName" value={this.state.name} onChange={this.handleChange} />
+            <div className="searchWrapper">
+                <form onSubmit={this.handleSubmit} id="advSearchForm">
+                    <input placeholder={this.props.queryObject.Voice ? this.state.Voice : "Voice"} 
+                            type="text" name="Voice" list="voiceName" 
+                            value={this.state.name} 
+                            onChange={this.handleChange}
+                            className="advSearchInput"/>
                     <datalist id="voiceName">
                         {voices.map((voice, i) => {
-                            return <option value={voice} key={voice + i}> {voice} </option>
-                        })}
+                            return <option value={voice} key={voice + i}> {voice} </option>})}
                     </datalist>
 
 
-                    <input placeholder={this.props.queryObject.Composer ? this.state.Composer : "Composer"} type="text" name="Composer" list="composerName" value={this.state.name} onChange={this.handleChange} />
+                    <input placeholder={this.props.queryObject.Composer ? this.state.Composer : "Composer"}                   type="text" name="Composer" list="composerName" 
+                            value={this.state.name} 
+                            onChange={this.handleChange} 
+                            className="advSearchInput"/>
                     <datalist id="composerName">
                         {composers.map((composer, i) => {
-                            return <option value={composer} key={composer + i}> {composer} </option>
-                        })}
+                            return <option value={composer} key={composer + i}> {composer} </option>})}
                     </datalist>
 
-                    <input placeholder={this.props.queryObject.Lyricist ? this.state.Voice : "Lyricist"} type="text" name="Lyricist" list="lyricistName" value={this.state.name} onChange={this.handleChange} />
+                    <input placeholder={this.props.queryObject.Lyricist ? this.state.Voice : "Lyricist"} 
+                            type="text" name="Lyricist" list="lyricistName" 
+                            value={this.state.name} 
+                            onChange={this.handleChange}
+                            className="advSearchInput"/>
                     <datalist id="lyricistName">
                         {lyricists.map((lyricist, i) => {
-                            return <option value={lyricist} key={lyricist + i}> {lyricist} </option>
-                        })}
+                            return <option value={lyricist} key={lyricist + i}> {lyricist} </option>})}
                     </datalist>
 
-                    <input placeholder={this.props.queryObject.Musical ? this.state.Musical : "Musical"} type="text" name="Musical" list="showName" value={this.state.name} onChange={this.handleChange} />
+                    <input placeholder={this.props.queryObject.Musical ? this.state.Musical : "Musical"} 
+                            type="text" name="Musical" list="showName"
+                            value={this.state.name}
+                            onChange={this.handleChange} 
+                            className="advSearchInput"/>
                     <datalist id="showName">
                         {musicals.map((show, i) => {
-                            return <option value={show} key={show + i}> {show} </option>
-                        })}
+                            return <option value={show} key={show + i}> {show} </option>})}
                     </datalist>
+                </form>
                     <img src={microphone} id="microphoneImg" alt="microphone"/>
                     <button id="advSearchBtn">
-                                              <p id="p1">S</p>
-                                              <p id="p2">E</p>
-                                              <p id="p3">A</p>
-                                              <p id="p4">R</p>
-                                              <p id="p5">C</p>
-                                              <p id="p6">H</p>
-                                              {/* <p>SEARCH</p> */}
-                                              </button>
-                </form>
+                        <p id="p1">S</p>
+                        <p id="p2">E</p>
+                        <p id="p3">A</p>
+                        <p id="p4">R</p>
+                        <p id="p5">C</p>
+                        <p id="p6">H</p>
+                    </button>
                 <AdvancedResults />
-                <Footer />
             </div>
         );
     }

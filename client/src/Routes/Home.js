@@ -1,21 +1,10 @@
 import React from 'react'
-import staff from '../images/staff.png'
 import Ads from '../Ads.js'
 
 function Home() {
     return (
         <div>
-            <div id="aboutDiv">
-                <div id="aboutImgDiv">
-                    <img src= { staff } id="staffImg" alt="staff"/>
-                </div>
-                <div id="aboutTextDiv">
-                    <p id="aboutText">
-                        Looking for your next audition song?<br/>
-                        The bran-new Showtune Database makes finding the perfect song easy.  Spend less time hunting for your song and more rehearsing!
-                    </p>
-                </div>
-            </div>
+            
             <div id="homeBodyDiv">
 
                 <Ads />
