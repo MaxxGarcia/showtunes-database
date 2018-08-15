@@ -5,6 +5,7 @@ const adminRoutes = express.Router();
 
 adminRoutes.route("/")
     .post((req, res) => {
+        console.log("test")
         let newSong = new Showtunes(req.body);
         newSong.user = req.user._id
         newSong.save((err, newSong) => {

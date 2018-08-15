@@ -33,6 +33,16 @@ const globalState = {
     musicals: [],
     voices: [],
     queryObject: {},
+    userInfo:{
+        username: '',
+        password: ''
+    },
+    authenticate:{
+        username: "",
+        isAdmin: false,
+        isAuthenticated: false
+    },
+    songAxios: "",
 }
 
 ReactDOM.render(

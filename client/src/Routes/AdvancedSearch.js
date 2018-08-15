@@ -4,6 +4,7 @@ import Footer from '../Footer.js'
 import AdvancedResults from "./AdvancedResults";
 import microphone from "../images/microphone.png";
 import axios from "axios";
+import microphone from "../images/microphone.png"
 
 class AdvancedSearch extends Component {
 
