@@ -43,7 +43,6 @@ class App extends Component {
 
     return (
       <div className="appWrapper">
-        {console.log(this.props)}
         <img src={titleImg} id="ShoDatImg" alt="Showtunes Database"/>
         {/* {pathname === "/" && 
                 <div id="aboutTextDiv">
