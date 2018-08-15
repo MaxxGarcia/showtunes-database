@@ -42,9 +42,9 @@ class SongProfile extends Component {
             <div id="resultsDiv">
 
                 <div id="songInfoDiv">
-                    <p>Song: {this.state.Song && this.state.Song} <br />
+                    <p id="songInfoP">Song: {this.state.Song && this.state.Song} <br />
                         Show: {this.state.Musical && this.state.Musical} <br />
-                        Relase Date:{this.state.spotifyData && this.state.spotifyData.data.tracks.items[0].album.release_date} <br />
+                        Relase Date: {this.state.spotifyData && this.state.spotifyData.data.tracks.items[0].album.release_date} <br />
                         {this.state.Voice && this.state.Voice}</p>
                 </div>
                 {this.props.iframe}
