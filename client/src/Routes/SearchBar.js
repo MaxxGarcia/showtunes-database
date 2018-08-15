@@ -15,16 +15,14 @@ class SearchBar extends Component {
         this.handleNutral = this.handleNutral.bind(this)
     }
     handleClick(e) {
-        console.log(this.props)
         let name = (e.target.value)
-        this.setState( {
-            Voice: "none",
+        this.setState( prevState => ({
+            Voice:  "none",
             Composer: "none",
             Lyricist: "none",
             Shows: "none",
-
-        })
-        this.setState(prevState => ({ [name]: prevState[name] === "block" }))
+            [name]: prevState[name] === "block" ?  "none": "block"
+        }))
     }
     handleNutral() {
         this.setState({
@@ -55,7 +53,6 @@ class SearchBar extends Component {
 
                     {/* <button className="searchBarBtn lastTwo">Advanced Search</button>
                     <button className="searchBarBtn lastTwo">Random Song</button> */}
-
                 <div className="options">
                     <div className="BIG" style={{ display: this.state.Voice }}>
                         {this.props.voices.map((voice, i) => {
