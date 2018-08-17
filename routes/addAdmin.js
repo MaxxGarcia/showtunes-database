@@ -3,7 +3,7 @@ const Admin = require("../models/user");
 const authRouter = express.Router();
 const jwt = require("jsonwebtoken");
 
-authRouter.post('/addadmin', (req, res) => {
+authRouter.post('/', (req, res) => {
     Admin.findOne({username: req.body.username}, (err, existingUser) => {
         if (err) return res.status(500).send({sucess: false, err});
         if (existingUser !== null) {
