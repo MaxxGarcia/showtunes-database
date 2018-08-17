@@ -20,6 +20,7 @@ class Results extends Component {
                             <Link to={`/songprofile/${song._id}`} key={song + i} className="resultWrapper">
                                 <div>{song.Song} <b>-</b> {song.Musical} </div>
                             </Link>
+
                         )
                     }
                     else if (searchType === "Composer" || searchType === "Lyricist") {
@@ -27,6 +28,7 @@ class Results extends Component {
                             return (
                                 <Link to={`/songprofile/${song._id}`} key={song + i} className="resultWrapper">
                                 <div>{song.Song} <b>-</b> {song.Musical} </div>
+
                                 </Link>
                             )
                         }
