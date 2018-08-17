@@ -86,7 +86,7 @@ class AdvancedSearch extends Component {
         const { composers, lyricists, musicals, voices } = this.props
         return (
             <div className="searchWrapper">
-                <form onSubmit={this.handleSubmit} id="advSearchForm">
+                <form id="advSearchForm">
                     <input placeholder={this.props.queryObject.Voice ? this.state.Voice : "Voice"} 
                             type="text" name="Voice" list="voiceName" 
                             value={this.state.name} 
@@ -128,7 +128,7 @@ class AdvancedSearch extends Component {
                     </datalist>
                 </form>
                     <img src={microphone} id="microphoneImg" alt="microphone"/>
-                    <button id="advSearchBtn">
+                    <button id="advSearchBtn" onClick={this.handleSubmit}>
                         <p id="p1">S</p>
                         <p id="p2">E</p>
                         <p id="p3">A</p>

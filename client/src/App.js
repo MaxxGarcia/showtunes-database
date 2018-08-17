@@ -17,8 +17,7 @@ import staff from './images/staff.png'
 
 class App extends Component {
   componentDidMount() {
-    axios.get("/songs").then(response => {
-      console.log(response)
+      axios.get("/songs").then(response => {
       let allComposers = []
       let allLyricists = []
       let allMusicals = []
@@ -40,10 +39,28 @@ class App extends Component {
         voices: allVoices
       })
     }).catch(err => console.log(err))
+    let songAxios = axios.create();
+        songAxios.interceptors.request.use((config) => {
+            const token = localStorage.getItem("token");
+            config.headers.Authorization = `Bearer ${token}`;
+            return config
+        })
+        this.props.setGlobalState({ songAxios })
+    songAxios.get("/private/admin").then(response => {
+      const { token, admin } = response.data
+      localStorage.setItem("token", token)
+      localStorage.setItem("admin", JSON.stringify(admin))
+      this.props.setGlobalState({
+        authenticate: {
+          user: localStorage.admin,
+          isAdmin: true,
+          isAuthenticated: true
+        }
+      })
+    })
   }
   render() {
     const { location: { pathname } } = this.props;
-    console.log(pathname)
     return (
       <div className="appWrapper">
         <img src={titleImg} id="ShoDatImg" alt="Showtunes Database" />

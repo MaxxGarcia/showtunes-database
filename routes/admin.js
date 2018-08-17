@@ -1,21 +1,28 @@
 const Showtunes = require("../models/songs");
+const Admin = require("../models/user");
 const express = require("express");
 
 const adminRoutes = express.Router();
 
 adminRoutes.route("/")
     .post((req, res) => {
-        console.log("test")
         let newSong = new Showtunes(req.body);
         newSong.user = req.user._id
         newSong.save((err, newSong) => {
             return err ? res.status(500).send(err) : res.status(201).send(newSong);
         })
     })
+    .get((req, res) => {
+        Admin.findById(req.user._id, (err, admin) => {
+            if (err) return res.status(500).send({ success: false, err })
+            if (admin === null) return res.status(400).send({ success: false, err: "User not found!" })
+            return res.status(200).send({ success: true, admin: admin.withoutPassword() })
+        })
+    });
 
 adminRoutes.route("/:id")
     .put((req, res) => {
-        Showtunes.findbyIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedSong) => {
+        Showtunes.findbyIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedSong) => {  
             return err ? res.status(500).send(err) : res.status(200).send(updatedSong);
         })
     })
