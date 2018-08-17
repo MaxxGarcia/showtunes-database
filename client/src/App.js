@@ -31,6 +31,13 @@ class App extends Component {
         })
         return allVoices.includes(item.Voice) ? null : allVoices.push(item.Voice) && allMusicals.includes(item.Musical) ? null : allMusicals.push(item.Musical)
       })
+      allComposers.sort();
+      allLyricists.sort();
+      allMusicals.sort();
+      allVoices.sort();
+      response.data.sort(item => {
+        
+      })
       this.props.setGlobalState({
         songData: response.data,
         composers: allComposers,
@@ -47,9 +54,6 @@ class App extends Component {
         })
         this.props.setGlobalState({ songAxios })
     songAxios.get("/private/admin").then(response => {
-      const { token, admin } = response.data
-      localStorage.setItem("token", token)
-      localStorage.setItem("admin", JSON.stringify(admin))
       this.props.setGlobalState({
         authenticate: {
           user: localStorage.admin,
@@ -57,6 +61,8 @@ class App extends Component {
           isAuthenticated: true
         }
       })
+    }).catch(err => {
+      console.error(err.response.status)
     })
   }
   render() {

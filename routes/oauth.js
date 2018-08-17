@@ -22,7 +22,6 @@ var client_secret = "***REMOVED***"
 oauthRoutes.get("/", (req, res) => {
     axios(authOptions)
         .then(response =>{
-            console.log(response.data)
             res.send(response.data)
         })
         .catch(err => console.log(err))
