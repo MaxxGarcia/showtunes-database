@@ -5,7 +5,7 @@
         
     }
     html{
-        background: linear-gradient(to bottom,rgb(218, 235, 236));
+        background: linear-gradient(to bottom,rgb(243, 251, 252));
         background-size: contain;
     }
     #ShoDatImg {
@@ -33,7 +33,7 @@
     #searchBarDiv{
         height: 173px;
         width: 6px;
-        background: rgb(218, 235, 236);
+        background: rgb(243, 251, 252);
         border-radius: 4px;
         display: grid;
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
@@ -50,12 +50,15 @@
         letter-spacing: 3px;
         margin: 0 2px;
         border: 1px solid rgb(218, 235, 236);
-        border-radius: 10px;
+        border-radius: 4px;
         background: linear-gradient(to right, rgb(204, 220, 221), rgb(218, 235, 236), rgb(204, 220, 221));
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+    }
+    .searchBarBtn:focus{
+        outline: 0;
     }
     .navbar {
         height: 77px;
@@ -75,28 +78,27 @@
         background-size: cover;
         background-color: transparent;
         color: rgb(204, 220, 221);
-        height: 70px;
-        width: 70px;
-        border-radius: 35px;
+        height: 90px;
+        width: 90px;
+        border-radius: 4px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         text-shadow: 2px 2px 2px black;
         line-height: 20px;
-        font-size: 11px;
+        font-size: 15px;
     }
     .navBtn:hover{
-        text-shadow: 2px 2px 3px rgb(98, 0, 0);
-        transform: scale(1.1);
+        transform: scale(1.06);
         -webkit-transition: transform 0.2s ease-in-out;
         box-shadow: 0px 2px px rgb(98, 153, 150);
     }
     .searchBarBtn:hover{
-        background: linear-gradient(to right, rgb(178, 0, 1), rgb(98, 0, 0));
+        background: linear-gradient(to right, rgb(178, 0, 1), rgb(178, 0, 1));
         color: rgb(218, 235, 236);
         box-shadow: 2px 2px 4px rgb(98, 153, 150);
-        border-radius: 3px;
+        border-radius: 4px;
     }
     .options{
         display: flex;
@@ -104,13 +106,15 @@
         align-items: center;
     }
     .BIG{
+        position: relative;
+        right: 22px;
         width: 520px;
         height: 222px;
         overflow: scroll;
         background: linear-gradient(to right, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
         overflow: scroll;
         box-shadow: 2px 2px 20px rgb(98, 153, 150);
-        border-radius: 12px;
+        border-radius: 4px;
         column-count: 2;
 
     }
@@ -120,9 +124,8 @@
         font-size: 33px;
     }
     .searchResultLink:hover{
-        font-size: 38px;
-        color: black;
-        text-shadow: 1px 1px rgb(178, 0, 1);
+        font-size: 34px;
+        text-shadow: 1px 1px black;
     }
     .resultLink{
         width: 93%;
@@ -134,8 +137,8 @@
         background: linear-gradient(rgb(33, 71, 74), rgb(98, 153, 150));
         color: rgb(218, 235, 236);
         border: 1px solid rgb(33, 71, 74);
-        border-top-right-radius: 22px;
-        border-bottom-left-radius: 12px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
@@ -153,16 +156,19 @@
         margin-right: 6px;
     }
     #homeBodyDiv {
+        margin: 42px;
+        height: auto;
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
     /* RESULTS */
     #songInfoDiv {
         margin: 4px;
         width: 96%;
         border: solid rgb(33, 71, 74) 2px;
-        border-bottom-left-radius: 24px;
-        border-bottom-right-radius: 24px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
         background: linear-gradient(rgb(33, 71, 74), rgb(98, 153, 150));
         color: rgb(218, 235, 236);
     }
@@ -181,10 +187,31 @@
     #lyricsH3 {
         text-align: center;
     }
+    .bodydiv{
+        display: flex;
+        flex-direction: column;
+    }
     #resultsDiv{
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 9px;
+        margin-bottom: 32px;
+        text-align: center;
+        line-height: 28px;
+        background: linear-gradient(to right, rgb(243, 251, 252), rgb(229, 247, 248),rgb(212, 236, 236));
+        overflow: scroll;
+        box-shadow: 2px 2px 20px rgb(98, 153, 150);
+        border-radius: 4px;
+    }
+    .resultWrapper{
+        font-size: 28px;
+        line-height: 64px;
+    }
+    .resultWrapper:hover{
+            font-size: 28.5px;
+            text-shadow: 1px 1px black;
     }
     #resultsLyricsDiv{
         height: 166px;
@@ -236,7 +263,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 2px 2px 20px black;
-
     }
     .input{
         height: 54px;
@@ -245,7 +271,7 @@
         margin: 12px;
         align-self: center;
         justify-self: center;
-        border-radius: 6px;
+        border-radius: 4px;
         box-shadow: 2px 2px 20px black;
     }
     #microphoneImg{
@@ -310,10 +336,32 @@
         grid-gap: 4px;
         background-image: url("../images/conductor.jpg");
         background-attachment: fixed;
-        background-position: 0, -400px;
+        background-position: 0, 0;
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 2px 2px 20px black;
     }
-
+    /* SONG PROFILE */
+    #songProfileDiv{
+        display: flex;
+        flex-direction: column;
+    }
+    #songInfoInnerDiv{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #adminLoginButton{
+        width: 64px;
+        font-size: 14px;
+        justify-self: center;
+        position: relative;
+        bottom: 8px;
+    }
+    #errMsg{
+        color: white;
+        position: relative;
+        bottom: 12px;
+    }
 }
