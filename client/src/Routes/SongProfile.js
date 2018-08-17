@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Ads from '../Ads.js';
 import { connect } from "riddl-js"
 import axios from "axios";
+import EditButton from "./EditButton"
 
 
 class SongProfile extends Component {
@@ -38,10 +39,12 @@ class SongProfile extends Component {
             })
     }
     render() {
+        console.log(this.props.authenticate)
         return (
             <div id="resultsDiv">
 
                 <div id="songInfoDiv">
+                {this.props.authenticate.isAuthenticated === true && <EditButton givenSong={this.state}/> }
                     <p id="songInfoP">Song: {this.state.Song && this.state.Song} <br />
                         Show: {this.state.Musical && this.state.Musical} <br />
                         Relase Date: {this.state.spotifyData && this.state.spotifyData.data.tracks.items[0].album.release_date} <br />

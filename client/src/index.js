@@ -43,6 +43,10 @@ const globalState = {
         isAuthenticated: false
     },
     songAxios: "",
+    authErrCode: {
+        signup: "",
+        login: ""
+    }
 }
 
 ReactDOM.render(
