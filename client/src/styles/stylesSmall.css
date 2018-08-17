@@ -5,7 +5,7 @@
         
     }
     html{
-        background: linear-gradient(to bottom,rgb(218, 235, 236));
+        background: linear-gradient(to bottom,rgb(243, 251, 252));
         background-size: contain;
     }
     #ShoDatImg {
@@ -26,7 +26,7 @@
     #searchBarDiv{
         height: auto;
         width: 100%;
-        background: rgb(218, 235, 236);
+        background: rgb(243, 251, 252);
         border-radius: 4px;
         display: grid;
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
@@ -39,12 +39,21 @@
         letter-spacing: 2px;
         margin: 0 2px;
         border: 1px solid rgb(218, 235, 236);
-        border-radius: 10px;
+        border-radius: 4px;
         background: linear-gradient(to right, rgb(204, 220, 221), rgb(218, 235, 236), rgb(204, 220, 221));
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+    }
+    .searchBarBtn:focus{
+        outline: 0;
+    }
+    .searchBarBtn:hover{
+        background: linear-gradient(to right, rgb(178, 0, 1), rgb(178, 0, 1));
+        color: rgb(218, 235, 236);
+        box-shadow: 2px 2px 4px rgb(98, 153, 150);
+        border-radius: 4px;
     }
     .navbar {
         height: 77px;
@@ -66,7 +75,7 @@
         color: rgb(204, 220, 221);
         height: 70px;
         width: 70px;
-        border-radius: 35px;
+        border-radius: 4px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -76,16 +85,9 @@
         font-size: 11px;
     }
     .navBtn:hover{
-        text-shadow: 2px 2px 3px rgb(98, 0, 0);
-        transform: scale(1.1);
+        transform: scale(1.04);
         -webkit-transition: transform 0.2s ease-in-out;
         box-shadow: 0px 2px px rgb(98, 153, 150);
-    }
-    .searchBarBtn:hover{
-        background: linear-gradient(to right, rgb(178, 0, 1), rgb(98, 0, 0));
-        color: rgb(218, 235, 236);
-        box-shadow: 2px 2px 4px rgb(98, 153, 150);
-        border-radius: 3px;
     }
     .options{
         display: flex;
@@ -99,7 +101,7 @@
         background: linear-gradient(to right, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
         overflow: scroll;
         box-shadow: 2px 2px 20px rgb(98, 153, 150);
-        border-radius: 12px;
+        border-radius: 4px;
     }
     .searchResultLink{
         display: block;
@@ -107,8 +109,7 @@
     }
     .searchResultLink:hover{
         font-size: 18px;
-        color: black;
-        text-shadow: 1px 1px rgb(178, 0, 1);
+        text-shadow: 1px 1px black;
     }
     .resultLink{
         width: 93%;
@@ -121,8 +122,8 @@
         background: linear-gradient(rgb(33, 71, 74), rgb(98, 153, 150));
         color: rgb(218, 235, 236);
         border: 1px solid rgb(33, 71, 74);
-        border-top-right-radius: 22px;
-        border-bottom-left-radius: 12px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
@@ -146,8 +147,8 @@
         margin: 4px;
         width: 96%;
         border: solid rgb(33, 71, 74) 2px;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
         background: linear-gradient(rgb(33, 71, 74), rgb(98, 153, 150));
         color: rgb(218, 235, 236);
     }
@@ -164,16 +165,6 @@
         display: flex;
         flex-direction: row;
     }
-    .resultsDiv{
-        margin: 9px;
-        margin-bottom: 32px;
-        text-align: center;
-        line-height: 28px;
-        background: linear-gradient(to right, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
-        overflow: scroll;
-        box-shadow: 2px 2px 20px rgb(98, 153, 150);
-        border-radius: 12px;
-    }
     .please{
         text-align: center;
         font-size: 14px;
@@ -187,6 +178,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 9px;
+        margin-bottom: 32px;
+        text-align: center;
+        line-height: 28px;
+        background: linear-gradient(to right, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
+        overflow: scroll;
+        box-shadow: 2px 2px 20px rgb(98, 153, 150);
+        border-radius: 4px;
     }
     #resultsLyricsDiv{
         height: 188px;
@@ -233,7 +232,6 @@
         grid-gap: 4px;
         background-image: url("../images/spotlights.png");
         background-attachment: fixed;
-        background-position: 0, -300px;
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 2px 2px 20px black;
@@ -244,7 +242,7 @@
         width: 70%;
         margin: 12px;
         align-self: center;
-        border-radius: 6px;
+        border-radius: 4px;
         box-shadow: 2px 2px 20px black;
     }
     #microphoneImg{
@@ -333,6 +331,17 @@
         border: solid thin;
         border-radius: 3px;
         background-color: rgb(98, 153, 150)
+    }
+    #adminLoginButton{
+        width: 32%;
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        bottom: 22px;
+        left: 12px;
+    }
+    #errMsg{
+        color: white;
     }
 }
 
