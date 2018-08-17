@@ -10,15 +10,16 @@ class AdvancedSearch extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            Composer: this.props.queryObject.Composer ? this.props.queryObject.Composer : '',
-            Lyricist: this.props.queryObject.Lyricist ? this.props.queryObject.Lyricist : '',
-            Musical: this.props.queryObject.Musical ? this.props.queryObject.Lyricist : '',
-            Voice: this.props.queryObject.Voice ? this.props.queryObject.Voice :''
+            Composer: this.props.queryObject.Composer ? this.props.queryObject.Composer : 'Composer',
+            Lyricist: this.props.queryObject.Lyricist ? this.props.queryObject.Lyricist : 'Lyricist',
+            Musical: this.props.queryObject.Musical ? this.props.queryObject.Musical : 'Musical',
+            Voice: this.props.queryObject.Voice ? this.props.queryObject.Voice : 'Voice'
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
-        this.handleHandle = this.handleHandle.bind(this)
+        this.handleHandle = this.handleHandle.bind(this);
+        this.clearInputs = this.clearInputs.bind(this);
     }
     componentDidMount() {
         this.handleHandle()
@@ -44,7 +45,7 @@ class AdvancedSearch extends Component {
         }
     }
     handleSubmit(e) {
-        e.preventDefault(e) 
+        e.preventDefault(e)
         let newQueryObject = this.state
         let queryObject = this.props.queryObject
         for (let key in newQueryObject) {
@@ -81,61 +82,73 @@ class AdvancedSearch extends Component {
             this.props.setGlobalState(prevState => ({ ...prevState, advancedData: foundObjects }));
         })
     }
-
+    clearInputs() {
+        this.setState({
+            Composer: '',
+            Lyricist: '',
+            Musical: '',
+            Voice: ''
+        })
+    }
     render() {
         const { composers, lyricists, musicals, voices } = this.props
         return (
             <div className="searchWrapper">
                 <form id="advSearchForm">
-                    <input placeholder={this.props.queryObject.Voice ? this.state.Voice : "Voice"} 
-                            type="text" name="Voice" list="voiceName" 
-                            value={this.state.name} 
-                            onChange={this.handleChange}
-                            className="input"/>
+                    <input placeholder={this.state.Voice}
+                        type="text" name="Voice" list="voiceName"
+                        value={this.state.Voice}
+                        onChange={this.handleChange}
+                        className="input" />
                     <datalist id="voiceName">
                         {voices.map((voice, i) => {
-                            return <option value={voice} key={voice + i}> {voice} </option>})}
+                            return <option value={voice} key={voice + i}> {voice} </option>
+                        })}
                     </datalist>
 
 
-                    <input placeholder={this.props.queryObject.Composer ? this.state.Composer : "Composer"}                   type="text" name="Composer" list="composerName" 
-                            value={this.state.name} 
-                            onChange={this.handleChange} 
-                            className="input"/>
+                    <input placeholder={this.state.Composer} type="text" name="Composer" list="composerName"
+                        value={this.state.Composer}
+                        onChange={this.handleChange}
+                        className="input" />
                     <datalist id="composerName">
                         {composers.map((composer, i) => {
-                            return <option value={composer} key={composer + i}> {composer} </option>})}
+                            return <option value={composer} key={composer + i}> {composer} </option>
+                        })}
                     </datalist>
 
-                    <input placeholder={this.props.queryObject.Lyricist ? this.state.Voice : "Lyricist"} 
-                            type="text" name="Lyricist" list="lyricistName" 
-                            value={this.state.name} 
-                            onChange={this.handleChange}
-                            className="input"/>
+                    <input placeholder={this.state.Voice}
+                        type="text" name="Lyricist" list="lyricistName"
+                        value={this.state.Lyricist}
+                        onChange={this.handleChange}
+                        className="input" />
                     <datalist id="lyricistName">
                         {lyricists.map((lyricist, i) => {
-                            return <option value={lyricist} key={lyricist + i}> {lyricist} </option>})}
+                            return <option value={lyricist} key={lyricist + i}> {lyricist} </option>
+                        })}
                     </datalist>
 
-                    <input placeholder={this.props.queryObject.Musical ? this.state.Musical : "Musical"} 
-                            type="text" name="Musical" list="showName"
-                            value={this.state.name}
-                            onChange={this.handleChange} 
-                            className="input"/>
+                    <input placeholder={this.state.Musical}
+                        type="text" name="Musical" list="showName"
+                        value={this.state.Musical}
+                        onChange={this.handleChange}
+                        className="input" />
                     <datalist id="showName">
                         {musicals.map((show, i) => {
-                            return <option value={show} key={show + i}> {show} </option>})}
+                            return <option value={show} key={show + i}> {show} </option>
+                        })}
                     </datalist>
                 </form>
-                    <img src={microphone} id="microphoneImg" alt="microphone"/>
-                    <button id="advSearchBtn" onClick={this.handleSubmit}>
-                        <p id="p1">S</p>
-                        <p id="p2">E</p>
-                        <p id="p3">A</p>
-                        <p id="p4">R</p>
-                        <p id="p5">C</p>
-                        <p id="p6">H</p>
-                    </button>
+                <img src={microphone} id="microphoneImg" alt="microphone" />
+                <button id="advSearchBtn" onClick={this.handleSubmit}>
+                    <p id="p1">S</p>
+                    <p id="p2">E</p>
+                    <p id="p3">A</p>
+                    <p id="p4">R</p>
+                    <p id="p5">C</p>
+                    <p id="p6">H</p>
+                </button>
+                <button onClick={this.clearInputs}> Clear </button>
                 <Ads />
                 <AdvancedResults />
             </div>

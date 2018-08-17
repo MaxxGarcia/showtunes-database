@@ -22,7 +22,6 @@ var client_secret = "03ee415e96834b4e9501b9cb604974e7"
 oauthRoutes.get("/", (req, res) => {
     axios(authOptions)
         .then(response =>{
-            console.log(response.data)
             res.send(response.data)
         })
         .catch(err => console.log(err))

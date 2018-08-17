@@ -22,8 +22,6 @@ class SongProfile extends Component {
                     axios.get(`https://api.spotify.com/v1/search?q=${songName}&type=track`, { headers: token })
                         .then(response => {
                             this.setState(prevState => {
-                                console.log(this.state)
-                                console.log(response.data.tracks.items.filter(album => album.album.name === this.state.Musical))
                                 return {
                                     ...prevState,
                                     spotifyData: {...response}
@@ -39,7 +37,6 @@ class SongProfile extends Component {
             })
     }
     render() {
-        console.log(this.props.authenticate)
         return (
             <div id="songProfileDiv">
 
