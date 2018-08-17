@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "riddl-js";
 import axios from "axios";
 import NewAdmin from "./NewAdmin"
+import AdminList from "./AdminList"
 
 class AdminPortal extends Component {
     constructor() {
@@ -38,6 +39,7 @@ class AdminPortal extends Component {
     handleChange(e) {
         const { name, value } = e.target;
         this.setState({ [name]: value })
+        console.log(this.state)
     }
     handleNestedChange(e) {
         const { name, value } = e.target;
@@ -80,8 +82,8 @@ class AdminPortal extends Component {
                     isAuthenticated: true
                 }
             })
-        }).catch(err => { 
-            console.error(err); 
+        }).catch(err => {
+            console.error(err);
             this.props.setGlobalState({
                 authErrCode: {
                     login: err.response.status
@@ -114,9 +116,9 @@ class AdminPortal extends Component {
     render() {
         let authErrCode = this.props.authErrCode.login;
         let errMsg = "";
-        if(authErrCode < 500 && authErrCode > 399){
+        if (authErrCode < 500 && authErrCode > 399) {
             errMsg = "Invalid username or password!"
-        } else if(authErrCode > 499){
+        } else if (authErrCode > 499) {
             errMsg = "Server Error!"
         }
         return (
@@ -130,34 +132,50 @@ class AdminPortal extends Component {
                     </form>
                 }
                 {this.props.authenticate.isAuthenticated === true &&
-                    <div >
-                        <h4><button onClick={this.handleLogout}> Logout </button> </h4>
+                    <div className="hiddenAdminContent">
+                        <form onSubmit={this.handleSubmit} className="newSongForm">
                         Add New Showtune to Database:
-                        <form onSubmit={this.handleSubmit}>
+                             {/* //Voice */}
+                             Voice<br/>
+                             <select name="Voice" onChange={this.handleChange}>
+                                {this.props.voices.map((voice, i) => {
+                                    return <option value={voice} key={voice+i}>{voice}</option>
+                                })}
+                            </select>
+                            <br/>
+
                             {/* //Composers List */}
-                            <input placeholder="Seperate Composers by Comma" value={this.state.Composers} onChange={this.handleChange} name="Composers" type="text" />
-
+                            Composers<br/>
+                            <input placeholder="Spearate Composers by Comma" value={this.state.Composers} onChange={this.handleChange} name="Composers" type="text" />
+                            <br/>
                             {/* //lyricists Dropdown */}
-                            <input placeholder="Seperate Lyricists by Comma" value={this.state.Lyricists} onChange={this.handleChange} name="Lyricists" type="text" />
-
+                            Lyricists<br/>
+                            <input placeholder="Spearate Lyricists by Comma" value={this.state.Lyricists} onChange={this.handleChange} name="Lyricists" type="text" />
+                            <br/>
                             {/* //Song Name */}
+                            Song Name<br/>
                             <input placeholder="Song Name" value={this.state.Song} onChange={this.handleChange} name="Song" type="text" />
-
-                            {/* //Voice */}
-                            <input placeholder="Song Voice" value={this.state.Voice} onChange={this.handleChange} name="Voice" type="text" />
-
-                            {/* //Musical */}
+                            <br/>
+                           {/* //Musical */}
+                           Musical Name<br/>
                             <input placeholder="Musical" value={this.state.Musical} onChange={this.handleChange} name="Musical" type="text" />
-
+                            <br/>
                             {/* //Spotify Link */}
+                            Spotify Link<br/>
                             <input placeholder="Spotify Link" value={this.state.links.spotify} onChange={this.handleNestedChange} name="spotify" type="text" />
-
+                            <br/>
                             {/* //Youtube Link */}
+                            Spotify Link<br/>
                             <input placeholder="Youtube Link" value={this.state.links.youtube} onChange={this.handleNestedChange} name="youtube" type="text" />
-
-                            <button> Submit Song</button>
+                            <br/>
+                            <button className="button"> Submit Song</button>
+                            
                         </form>
+                        <br/>
                         <NewAdmin />
+                        <AdminList />
+                        <br/>
+                        <h4><button className="button" onClick={this.handleLogout}> Logout </button> </h4>
                     </div>
                 }
             </div>

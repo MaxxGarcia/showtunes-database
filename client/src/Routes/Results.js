@@ -12,20 +12,23 @@ class Results extends Component {
     render() {
         const { searchType, searchTerm } = this.props.match.params;
         return (
-            <div id="resultsDiv">
+            <div className="resultsDiv">
+            <b>Song - Musical</b>
                 {this.props.songData.map((song, i) => {
                     if (sanitizeHref(song[searchType]) === searchTerm) {
                         return (
-                                <Link to={`/songprofile/${song._id}`} key={song + i} className="resultWrapper">
-                                    <div>{song.Song} - {song.Musical} </div>
-                                </Link>
+                            <Link to={`/songprofile/${song._id}`} key={song + i} className="resultWrapper">
+                                <div>{song.Song} <b>-</b> {song.Musical} </div>
+                            </Link>
+
                         )
                     }
                     else if (searchType === "Composer" || searchType === "Lyricist") {
                         if (song[searchType].some(item => item === searchTerm)) {
                             return (
-                                <Link to={`/songprofile/${song._id}`} key={song + i}    className="resultWrapper">
-                                    <div>{song.Song} - {song.Musical} </div>
+                                <Link to={`/songprofile/${song._id}`} key={song + i} className="resultWrapper">
+                                <div>{song.Song} <b>-</b> {song.Musical} </div>
+
                                 </Link>
                             )
                         }
@@ -33,7 +36,7 @@ class Results extends Component {
                     return null
                 })
                 }
-            
+                <br/>
             </div>
         )
     }

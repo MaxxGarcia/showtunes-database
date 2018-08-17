@@ -8,7 +8,7 @@ class EditModal extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            song: {...this.props.givenSong}
+            song: { ...this.props.givenSong }
         }
         this.handleSwitch = this.handleSwitch.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -16,13 +16,19 @@ class EditModal extends Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        const {songAxios} = this.props
+        let songAxios = axios.create();
+        songAxios.interceptors.request.use((config) => {
+            const token = localStorage.getItem("token");
+            config.headers.Authorization = `Bearer ${token}`;
+            return config
+        })
+        this.props.setGlobalState({ songAxios })
         let updatedSong = this.state.song;
         delete updatedSong.spotifyData
-        console.log(updatedSong)
+        updatedSong
         songAxios.put(`/private/admin/${updatedSong._id}`, updatedSong).then(response => {
             console.log(response.data)
-        })
+        }).catch(err => console.error(err))
     }
     handleSwitch(e) {
         let currentInput = document.getElementById("theInput");

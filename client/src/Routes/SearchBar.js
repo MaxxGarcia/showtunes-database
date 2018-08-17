@@ -40,6 +40,7 @@ class SearchBar extends Component {
         })
     }
     render() {
+        let randomSong = this.props.songData[Math.floor(Math.random() * this.props.songData.length)];
         return (
             <div id="stickyDiv">
                 <div id="searchBarDiv">
@@ -61,6 +62,7 @@ class SearchBar extends Component {
                     <button className="searchBarBtn lastTwo">Random Song</button> */}
                 <div className="options">
                     <div className="BIG" style={{ display: this.state.Voice }}>
+                        <button onClick={this.handleNutral}><b>X</b></button>
                         {this.props.voices.map((voice, i) => {
                             return <Link onClick={this.handleNutral}
                                 className="searchResultLink"
@@ -69,6 +71,7 @@ class SearchBar extends Component {
                         })}
                     </div>
                     <div className="BIG" style={{ display: this.state.Composer }}>
+                    <button onClick={this.handleNutral}><b>X</b></button>
                         {this.props.composers.map((composer, i) => {
                             return <Link onClick={this.handleNutral}
                                 className="searchResultLink"
@@ -77,6 +80,7 @@ class SearchBar extends Component {
                         })}
                     </div>
                     <div className="BIG" style={{ display: this.state.Lyricist }}>
+                    <button onClick={this.handleNutral}><b>X</b></button>
                         {this.props.lyricists.map((lyricist, i) => {
                             return <Link onClick={this.handleNutral}
                                 className="searchResultLink"
@@ -85,6 +89,7 @@ class SearchBar extends Component {
                         })}
                     </div>
                     <div className="BIG" style={{ display: this.state.Shows }}>
+                    <button onClick={this.handleNutral}><b>X</b></button>
                         {this.props.musicals.map((show, i) => {
                             return <Link onClick={this.handleNutral}
                                 className="searchResultLink"
