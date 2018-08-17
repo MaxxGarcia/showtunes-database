@@ -18,11 +18,20 @@ adminRoutes.route("/")
             if (admin === null) return res.status(400).send({ success: false, err: "User not found!" })
             return res.status(200).send({ success: true, admin: admin.withoutPassword() })
         })
-    });
+    })
+
+adminRoutes.route("/all")
+    .get((req, res) => {
+        Admin.find((err, admins) => {
+            return err ? res.status(500).send(err) : res.status(200).send(admins)
+        })
+    })
 
 adminRoutes.route("/:id")
     .put((req, res) => {
-        Showtunes.findbyIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedSong) => {  
+        console.log(req.body._id, req.params.id)
+        Showtunes.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedSong) => {
+            console.log("test")
             return err ? res.status(500).send(err) : res.status(200).send(updatedSong);
         })
     })

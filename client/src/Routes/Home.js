@@ -3,8 +3,7 @@ import Ads from '../Ads.js'
 
 function Home() {
     return (
-        <div>
-            
+        <div> 
             <div id="homeBodyDiv">
                 <div id="recentUpdatesDiv">
                     <h2>Recent Updates</h2>

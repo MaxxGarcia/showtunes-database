@@ -12,8 +12,8 @@ const MONGODB_URI = 'mongodb://localhost:27017/showtunes';
 const app = express();
 
 app.use(bodyParser.json())
-    .use("/private", expressJWT({secret: process.env.SECRET}))
     .use(bodyParser.urlencoded({ extended: false }))
+    .use("/private", expressJWT({ secret: process.env.SECRET }))
     .use("/private/admin", require("./routes/admin"))
     .use('/songs', require('./routes/songs'))
     .use("/oauth", require("./routes/oauth"))

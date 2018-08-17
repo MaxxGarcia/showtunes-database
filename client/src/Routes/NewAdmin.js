@@ -54,12 +54,12 @@ class NewAdmin extends Component {
             errMsg.innerHTML = "Server Error!"
         }
         return (
-            <div className="adminWrapper">
+            <div className="newAdminForm">
                 <form onSubmit={this.handleCreate}>
                     Create New Admin Credentials:
                     <input placeholder="username" value={this.state.username} onChange={this.handleChange} name="username" type="text" />
                     <input placeholder="password" value={this.state.password} onChange={this.handleChange} name="password" type="password" />
-                    <button>Register </button>
+                    <button className="button">Register </button>
                     <p id="errorText"> </p> <p id="successText"></p>
                 </form>
             </div>
