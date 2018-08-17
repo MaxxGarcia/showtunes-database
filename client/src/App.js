@@ -47,6 +47,7 @@ class App extends Component {
     return (
       <div className="appWrapper">
         <img src={titleImg} id="ShoDatImg" alt="Showtunes Database" />
+
         {pathname === "/" && (
           <div id="aboutDiv">
             <div id="aboutImgDiv">
@@ -60,10 +61,11 @@ class App extends Component {
             </div>
           </div>
         )}
-        <Navbar />
+
         {pathname !== "/AdvancedSearch" && (
           <SearchBar />
         )}
+        {pathname === "/" && (<Navbar />)}
         <div className="headerDiv">
         </div>
         <div className="bodyDiv">
@@ -74,6 +76,7 @@ class App extends Component {
             <Route path={`/results/:searchType/:searchTerm`} component={Results} />
             <Route path={`/songprofile/:searchTerm`} component={songProfile} />
           </Switch>
+          {pathname !== "/" && (<Navbar />)}
           <Footer />
         </div>
       </div>

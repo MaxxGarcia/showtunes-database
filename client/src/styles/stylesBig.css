@@ -1,4 +1,4 @@
-@media only screen and (max-width: 2345px) {
+@media only screen and (min-width : 1024px) {
     * {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         margin: 0;
@@ -20,23 +20,34 @@
         align-items: center;
     }
     #stickyDiv{
+        height: 203px;
+        width: 98%;
+        margin-left: 18px;
         position: sticky;
         top: -2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
     #searchBarDiv{
-        height: auto;
-        width: 100%;
+        height: 173px;
+        width: 6px;
         background: rgb(218, 235, 236);
         border-radius: 4px;
         display: grid;
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-        grid-gap: 2px;
+        grid-gap: 4px;
     }
     .searchBarBtn{
-        height: auto;
-        width: 100%;
-        font-size: 20px;
-        letter-spacing: 2px;
+        align-self: center;
+        justify-self: center;
+        height: 64px;;
+        width: 247px;
+        margin: 16px;
+        margin-bottom: 16px;
+        font-size: 33px;
+        letter-spacing: 3px;
         margin: 0 2px;
         border: 1px solid rgb(218, 235, 236);
         border-radius: 10px;
@@ -47,17 +58,75 @@
         align-items: center;
     }
     .navbar {
+        height: 77px;
+        margin-top: 9px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         position: sticky;
-        top: 0;
+        top: 58px;
+        /* position: relative;
+        z-index: 1; */
+    }
+    .navBtn{
+        position: relative;
+        bottom: 28px;
+        background-image: url("../images/vinylRecord.png");
+        background-size: cover;
+        background-color: transparent;
+        color: rgb(204, 220, 221);
+        height: 70px;
+        width: 70px;
+        border-radius: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        line-height: 20px;
+        font-size: 11px;
+    }
+    .navBtn:hover{
+        text-shadow: 2px 2px 3px rgb(98, 0, 0);
+        transform: scale(1.1);
+        -webkit-transition: transform 0.2s ease-in-out;
+        box-shadow: 0px 2px px rgb(98, 153, 150);
     }
     .searchBarBtn:hover{
         background: linear-gradient(to right, rgb(178, 0, 1), rgb(98, 0, 0));
         color: rgb(218, 235, 236);
         box-shadow: 2px 2px 4px rgb(98, 153, 150);
         border-radius: 3px;
+    }
+    .options{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .BIG{
+        width: 520px;
+        height: 222px;
+        overflow: scroll;
+        background: linear-gradient(to right, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
+        overflow: scroll;
+        box-shadow: 2px 2px 20px rgb(98, 153, 150);
+        border-radius: 12px;
+        column-count: 2;
+
+    }
+    .searchResultLink{
+        display: block;
+        text-align: center;
+        font-size: 33px;
+    }
+    .searchResultLink:hover{
+        font-size: 38px;
+        color: black;
+        text-shadow: 1px 1px rgb(178, 0, 1);
+    }
+    .resultLink{
+        width: 93%;
+        background: linear-gradient(to bottom, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
     }
     #aboutDiv{
         margin: 8px;
@@ -72,10 +141,12 @@
         align-items: center;
     }
     #aboutImgDiv {
-        width: 32%
+        width: 45%;
+        margin-right: 8px;
     }
     #aboutTextDiv {
         width: 64%;
+        font-size: 33px;
     }
     #staffImg {
         width: 100%;
@@ -143,6 +214,106 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+
+    /* Advanced Search */
+    .searchWrapper{
+        margin: 22px 0px 22px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #advSearchForm{
+        height: 345px;
+        width: 100%;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-gap: 4px;
+        background-image: url("../images/spotlights.png");
+        background-attachment: fixed;
+        background-position: 0, -300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 2px 2px 20px black;
+
+    }
+    .input{
+        height: 54px;
+        width: 70%;
+        font-size: 22px;
+        margin: 12px;
+        align-self: center;
+        justify-self: center;
+        border-radius: 6px;
+        box-shadow: 2px 2px 20px black;
+    }
+    #microphoneImg{
+        width: 144px;
+        height: auto;
+        align-self: center;
+        background-color: transparent!important;
+        position: relative;
+        bottom: 22px;
+    }
+    #microphoneImg:hover{
+        background: radial-gradient(gray, transparent, transparent);
+    }
+    #advSearchBtn{
+        color: white;
+        width: 80px;
+        height: 22px;
+        text-align: left;
+        background: transparent;
+        border: none;
+        position: relative;
+        bottom: 78px;
+        right: 26px;
+        transform: rotate(17deg);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        perspective: 1200px;
+        letter-spacing: 1px;
+    }
+    #p1{
+        font-size: 13.5px;
+    }
+    #p2{
+        font-size: 14.5px;
+    }
+    #p3{
+        font-size: 15.5px;
+    }
+    #p4{
+        font-size: 16.5px;
+    }
+    #p5{
+        font-size: 17.5px;
+    }
+    #p6{
+        font-size: 18.5px;
+    }
+    #advSearchBtn:hover{
+        color: rgb(149, 186, 185);
+    }
+
+    /* ADMIN PORTAL */
+    .adminWrapper{
+
+    }
+    #adminForm{
+        height: 144px;
+        width: 100%;
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+        grid-gap: 4px;
+        background-image: url("../images/conductor.jpg");
+        background-attachment: fixed;
+        background-position: 0, -400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 2px 2px 20px black;
     }
 
 }

@@ -47,7 +47,10 @@ class SongProfile extends Component {
                         Relase Date: {this.state.spotifyData && this.state.spotifyData.data.tracks.items[0].album.release_date} <br />
                         {this.state.Voice && this.state.Voice}</p>
                 </div>
+                <p className="please">Please select song from the album below</p>
+                
                 {this.props.iframe}
+
                 <div id="popularityGraphDiv">
                     <p>GRAPH of popularity  _/</p>
                 </div>
@@ -67,7 +70,6 @@ class SongProfile extends Component {
                 <div id="recDiv1">
                     <h3>You may also be interested in:</h3>
                     <div id="recDiv2">
-                        
                         <div className="recommendation">Recommended Song</div>
                         <div className="recommendation">Recommended Song</div>
                         <div className="recommendation">Recommended Song</div>
