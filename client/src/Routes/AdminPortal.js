@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "riddl-js";
 import axios from "axios";
+import NewAdmin from "./NewAdmin"
 
 class AdminPortal extends Component {
     constructor() {
@@ -23,6 +24,7 @@ class AdminPortal extends Component {
         this.handleLogin = this.handleLogin.bind(this);
         this.clearInputs = this.clearInputs.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
+        this.handleNestedChange = this.handleNestedChange.bind(this);
     }
     componentDidMount() {
         let songAxios = axios.create();
@@ -35,13 +37,11 @@ class AdminPortal extends Component {
     }
     handleChange(e) {
         const { name, value } = e.target;
-        console.log(name)
-            console.log("test")
-            this.setState({ [name]: value })
+        this.setState({ [name]: value })
     }
-    handleNestedChange(e){
+    handleNestedChange(e) {
         const { name, value } = e.target;
-        this.setState({ links: { [name]: value } })
+        this.setState(prevState => ({ links: { ...prevState.links, [name]: value } }))
     }
     handleUserData(e) {
         const { name, value } = e.target;
@@ -50,7 +50,7 @@ class AdminPortal extends Component {
     handleSubmit(e) {
         e.preventDefault()
         const newSong = this.state
-        const songAxios = this.props.songAxios
+        const { songAxios } = this.props
         songAxios.post("/private/admin", newSong).then(response => alert(response))
             .catch(err => { console.error(err, "err message") })
         this.setState({
@@ -80,8 +80,15 @@ class AdminPortal extends Component {
                     isAuthenticated: true
                 }
             })
+        }).catch(err => { 
+            console.error(err); 
+            this.props.setGlobalState({
+                authErrCode: {
+                    login: err.response.status
+                }
+            })
         });
-        this.clearInputs()
+        this.clearInputs();
     }
     handleLogout(e) {
         e.preventDefault();
@@ -105,8 +112,13 @@ class AdminPortal extends Component {
         })
     }
     render() {
-        const { props } = this
-        const { songForm } = props
+        let authErrCode = this.props.authErrCode.login;
+        let errMsg = "";
+        if(authErrCode < 500 && authErrCode > 399){
+            errMsg = "Invalid username or password!"
+        } else if(authErrCode > 499){
+            errMsg = "Server Error!"
+        }
         return (
             <div className="adminWrapper">
                 {this.props.authenticate.isAuthenticated === false &&
@@ -114,12 +126,13 @@ class AdminPortal extends Component {
                         <input placeholder="username" value={this.props.userInfo.username} onChange={this.handleUserData} name="username" type="text" />
                         <input placeholder="password" value={this.props.userInfo.password} onChange={this.handleUserData} name="password" type="password" />
                         <button>Login </button>
-
+                        <p> {errMsg}</p>
                     </form>
                 }
                 {this.props.authenticate.isAuthenticated === true &&
                     <div >
-                        <button onClick={this.handleLogout}> Logout </button>
+                        <h4><button onClick={this.handleLogout}> Logout </button> </h4>
+                        Add New Showtune to Database:
                         <form onSubmit={this.handleSubmit}>
                             {/* //Composers List */}
                             <input placeholder="Seperate Composers by Comma" value={this.state.Composers} onChange={this.handleChange} name="Composers" type="text" />
@@ -137,13 +150,14 @@ class AdminPortal extends Component {
                             <input placeholder="Musical" value={this.state.Musical} onChange={this.handleChange} name="Musical" type="text" />
 
                             {/* //Spotify Link */}
-                            <input placeholder="Spotify Link" value={this.state.links.spotify} onChange={this.handleChange} name="spotify" type="text" />
+                            <input placeholder="Spotify Link" value={this.state.links.spotify} onChange={this.handleNestedChange} name="spotify" type="text" />
 
                             {/* //Youtube Link */}
-                            <input placeholder="Youtube Link" value={this.state.links.youtube} onChange={this.handleChange} name="youtube" type="text" />
+                            <input placeholder="Youtube Link" value={this.state.links.youtube} onChange={this.handleNestedChange} name="youtube" type="text" />
 
                             <button> Submit Song</button>
                         </form>
+                        <NewAdmin />
                     </div>
                 }
             </div>
