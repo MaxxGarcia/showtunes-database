@@ -41,7 +41,7 @@ class SongProfile extends Component {
     render() {
         console.log(this.props.authenticate)
         return (
-            <div id="resultsDiv">
+            <div id="songProfileDiv">
 
                 <div id="songInfoDiv">
                 {this.props.authenticate.isAuthenticated === true && <EditButton givenSong={this.state}/> }
@@ -50,9 +50,16 @@ class SongProfile extends Component {
                         Relase Date: {this.state.spotifyData && this.state.spotifyData.data.tracks.items[0].album.release_date} <br />
                         {this.state.Voice && this.state.Voice}</p>
                 </div>
-                <p className="please">Please select song from the album below</p>
-                
-                {this.props.iframe}
+                    <p className="please">Please select song from the album below</p>
+                <div id="songInfoInnerDiv">
+                    {this.props.iframe}
+                    <div id="resultsLyricsDiv">
+                        <h3 id="lyricsH3">Lyrics</h3>
+                        <p>Naaaaats ingonyaaa ma bagithi babaaaaa</p>
+                        <p>There's vomit on his sweater already, Mom's psgetti</p>
+                    </div>
+                </div>
+
 
                 <div id="popularityGraphDiv">
                     <p>GRAPH of popularity  _/</p>
@@ -61,11 +68,7 @@ class SongProfile extends Component {
                 </div>
                 <div id="resultsBodyDiv">
                     <Ads />
-                    <div id="resultsLyricsDiv">
-                        <h3 id="lyricsH3">Lyrics</h3>
-                        <p>Naaaaats ingonyaaa ma bagithi babaaaaa</p>
-                        <p>There's vomit on his sweater already, Mom's psgetti</p>
-                    </div>
+
                 </div>
                 <div id="buyingOptionsDiv">
                     <p>Buying options</p>
