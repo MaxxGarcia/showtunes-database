@@ -12,7 +12,6 @@
         margin: 5px;
         width: 94%
     }
-
     .headerDiv{
         overflow: none;
         display: flex;
@@ -22,6 +21,7 @@
     #stickyDiv{
         position: sticky;
         top: -2px;
+        margin-bottom: 22px;
     }
     #searchBarDiv{
         height: auto;
@@ -47,11 +47,39 @@
         align-items: center;
     }
     .navbar {
+        height: 77px;
+        margin-top: 9px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         position: sticky;
-        top: 0;
+        top: 58px;
+        /* position: relative;
+        z-index: 1; */
+    }
+    .navBtn{
+        position: relative;
+        bottom: 28px;
+        background-image: url("../images/vinylRecord.png");
+        background-size: cover;
+        background-color: transparent;
+        color: rgb(204, 220, 221);
+        height: 70px;
+        width: 70px;
+        border-radius: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        line-height: 20px;
+        font-size: 11px;
+    }
+    .navBtn:hover{
+        text-shadow: 2px 2px 3px rgb(98, 0, 0);
+        transform: scale(1.1);
+        -webkit-transition: transform 0.2s ease-in-out;
+        box-shadow: 0px 2px px rgb(98, 153, 150);
     }
     .searchBarBtn:hover{
         background: linear-gradient(to right, rgb(178, 0, 1), rgb(98, 0, 0));
@@ -86,9 +114,6 @@
         width: 93%;
         background: linear-gradient(to bottom, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
     }
-
-
-
 
     #aboutDiv{
         margin: 8px;
@@ -138,6 +163,22 @@
     #resultsBodyDiv {
         display: flex;
         flex-direction: row;
+    }
+    .resultsDiv{
+        margin: 9px;
+        margin-bottom: 32px;
+        text-align: center;
+        line-height: 28px;
+        background: linear-gradient(to right, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
+        overflow: scroll;
+        box-shadow: 2px 2px 20px rgb(98, 153, 150);
+        border-radius: 12px;
+    }
+    .please{
+        text-align: center;
+        font-size: 14px;
+        width: 98%;
+        line-height: 32px;
     }
     #lyricsH3 {
         text-align: center;
@@ -193,18 +234,16 @@
         background-image: url("../images/spotlights.png");
         background-attachment: fixed;
         background-position: 0, -300px;
-        /* background-position-y: bottom; */
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 2px 2px 20px black;
 
     }
-    .advSearchInput{
+    .input{
         height: 22px;
         width: 70%;
         margin: 12px;
         align-self: center;
-        justify-self: center;
         border-radius: 6px;
         box-shadow: 2px 2px 20px black;
     }
@@ -216,16 +255,19 @@
         position: relative;
         bottom: 22px;
     }
+    #microphoneImg:hover{
+        background: radial-gradient(gray, transparent, transparent);
+    }
     #advSearchBtn{
         color: white;
-        width: 122px;
-        height: 77px;
+        width: 80px;
+        height: 22px;
         text-align: left;
         background: transparent;
         border: none;
         position: relative;
-        bottom: 99px;
-        right: 10px;
+        bottom: 78px;
+        right: 26px;
         transform: rotate(17deg);
         display: flex;
         flex-direction: row;
@@ -254,6 +296,25 @@
     #advSearchBtn:hover{
         color: rgb(149, 186, 185);
     }
+
+    /* ADMIN PORTAL */
+    .adminWrapper{
+
+    }
+    #adminForm{
+        height: 144px;
+        width: 100%;
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+        grid-gap: 4px;
+        background-image: url("../images/conductor.jpg");
+        background-attachment: fixed;
+        background-position: 0, -400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 2px 2px 20px black;
+    }
+
 }
 
 

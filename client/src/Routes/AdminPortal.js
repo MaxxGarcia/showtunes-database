@@ -110,9 +110,9 @@ class AdminPortal extends Component {
         return (
             <div className="adminWrapper">
                 {this.props.authenticate.isAuthenticated === false &&
-                    <form onSubmit={this.handleLogin}>
-                        <input placeholder="username" value={this.props.userInfo.username} onChange={this.handleUserData} name="username" type="text" />
-                        <input placeholder="password" value={this.props.userInfo.password} onChange={this.handleUserData} name="password" type="password" />
+                    <form onSubmit={this.handleLogin} id="adminForm">
+                        <input className="input" placeholder="username" value={this.props.userInfo.username} onChange={this.handleUserData} name="username" type="text" />
+                        <input className="input" placeholder="password" value={this.props.userInfo.password} onChange={this.handleUserData} name="password" type="password" />
                         <button>Login </button>
 
                     </form>

@@ -6,9 +6,6 @@ function Home() {
         <div>
             
             <div id="homeBodyDiv">
-
-                <Ads />
-
                 <div id="recentUpdatesDiv">
                     <h2>Recent Updates</h2>
                     <div className="updates">
@@ -24,6 +21,8 @@ function Home() {
                         <p>We got you the thing that you were wanting!</p> 
                     </div>
                 </div>
+                
+                <Ads />
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque temporibus, nobis ad a iure doloribus at sunt, eveniet illum dicta mollitia error nostrum expedita eligendi deleniti illo animi facilis! Quae!
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore tempora consectetur ullam voluptas facere. Quae sit veniam omnis eos libero, dolorem alias nihil, tenetur suscipit ipsa velit, dolor corrupti enim?

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "riddl-js";
-import Footer from '../Footer.js'
-import AdvancedResults from "./AdvancedResults";
 import microphone from "../images/microphone.png";
 import axios from "axios";
-import microphone from "../images/microphone.png"
+import AdvancedResults from "./AdvancedResults";
+import Ads from "../Ads";
 
 class AdvancedSearch extends Component {
 
@@ -92,7 +91,7 @@ class AdvancedSearch extends Component {
                             type="text" name="Voice" list="voiceName" 
                             value={this.state.name} 
                             onChange={this.handleChange}
-                            className="advSearchInput"/>
+                            className="input"/>
                     <datalist id="voiceName">
                         {voices.map((voice, i) => {
                             return <option value={voice} key={voice + i}> {voice} </option>})}
@@ -102,7 +101,7 @@ class AdvancedSearch extends Component {
                     <input placeholder={this.props.queryObject.Composer ? this.state.Composer : "Composer"}                   type="text" name="Composer" list="composerName" 
                             value={this.state.name} 
                             onChange={this.handleChange} 
-                            className="advSearchInput"/>
+                            className="input"/>
                     <datalist id="composerName">
                         {composers.map((composer, i) => {
                             return <option value={composer} key={composer + i}> {composer} </option>})}
@@ -112,7 +111,7 @@ class AdvancedSearch extends Component {
                             type="text" name="Lyricist" list="lyricistName" 
                             value={this.state.name} 
                             onChange={this.handleChange}
-                            className="advSearchInput"/>
+                            className="input"/>
                     <datalist id="lyricistName">
                         {lyricists.map((lyricist, i) => {
                             return <option value={lyricist} key={lyricist + i}> {lyricist} </option>})}
@@ -122,7 +121,7 @@ class AdvancedSearch extends Component {
                             type="text" name="Musical" list="showName"
                             value={this.state.name}
                             onChange={this.handleChange} 
-                            className="advSearchInput"/>
+                            className="input"/>
                     <datalist id="showName">
                         {musicals.map((show, i) => {
                             return <option value={show} key={show + i}> {show} </option>})}
@@ -137,6 +136,7 @@ class AdvancedSearch extends Component {
                         <p id="p5">C</p>
                         <p id="p6">H</p>
                     </button>
+                <Ads />
                 <AdvancedResults />
             </div>
         );
