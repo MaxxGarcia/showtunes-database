@@ -24,15 +24,23 @@ class SongProfile extends Component {
                             this.setState(prevState => {
                                 return {
                                     ...prevState,
-                                    spotifyData: {...response}
+                                    spotifyData: { ...response }
                                 }
                             })
                             let albumId = `https://open.spotify.com/embed?uri=spotify:album:${response.data.tracks.items[0].album.id}`;
                             this.props.setGlobalState({
-                                iframe: <iframe title={response.data} src={albumId} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                iframeS: <iframe title={response.data} src={albumId} className="iframeS" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                             })
                         })
                         .catch(err => { console.error(err) })
+                })
+                
+            }).then(response => {
+                axios.post("/youtube",{q: this.state.Song}).then( response => {
+                    let playerURL = `https://www.youtube.com/embed/${response.data}`
+                    this.props.setGlobalState({    
+                        iframeY: <iframe className="iframeY" src={playerURL} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                    })
                 })
             })
     }
@@ -41,15 +49,16 @@ class SongProfile extends Component {
             <div id="songProfileDiv">
 
                 <div id="songInfoDiv">
-                {this.props.authenticate.isAuthenticated === true && <EditButton givenSong={this.state}/> }
+                    {this.props.authenticate.isAuthenticated === true && <EditButton givenSong={this.state} />}
                     <p id="songInfoP">Song: {this.state.Song && this.state.Song} <br />
                         Show: {this.state.Musical && this.state.Musical} <br />
                         Relase Date: {this.state.spotifyData && this.state.spotifyData.data.tracks.items[0].album.release_date} <br />
                         {this.state.Voice && this.state.Voice}</p>
                 </div>
-                    <p className="please">Please select song from the album below</p>
+                <p className="please">Please select song from the album below</p>
                 <div id="songInfoInnerDiv">
-                    {this.props.iframe}
+                    {this.props.iframeS}
+                    {this.props.iframeY}
                     <div id="resultsLyricsDiv">
                         <h3 id="lyricsH3">Lyrics</h3>
                         <p>Naaaaats ingonyaaa ma bagithi babaaaaa</p>
