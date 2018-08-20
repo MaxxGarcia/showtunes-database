@@ -1,7 +1,6 @@
 const Showtunes = require("../models/songs");
 const Admin = require("../models/user");
 const express = require("express");
-
 const adminRoutes = express.Router();
 
 adminRoutes.route("/")
@@ -29,16 +28,23 @@ adminRoutes.route("/all")
 
 adminRoutes.route("/:id")
     .put((req, res) => {
-        console.log(req.body._id, req.params.id)
+        delete req.body._id
+        delete req.body.spotifyData
         Showtunes.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedSong) => {
-            console.log("test")
+            console.log(req.params.id)
             return err ? res.status(500).send(err) : res.status(200).send(updatedSong);
         })
     })
     .delete((req, res) => {
-        Showtunes.findByIdAndRemove(req.params.id, (err) => {
+        Showtunes.findOneAndDelete(req.params.id, (err) => {
             return err ? res.status(500).send(err) : res.status(200).send("THE ROUGE SHOWTUNE HAS BEEN ELIMINATED")
         })
     })
 
+adminRoutes.route("/delete/:id")
+    .delete((req, res) => {
+        Admin.findOneAndDelete(req.params._id, (err) => {
+            return err ? res.status(500).send(err) : res.status(200).send("THE ROUGE ADMIN HAS BEEN ELIMINATED")
+        })
+    })
 module.exports = adminRoutes;

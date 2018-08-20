@@ -125,8 +125,8 @@ class AdminPortal extends Component {
             <div className="adminWrapper">
                 {this.props.authenticate.isAuthenticated === false &&
                     <form onSubmit={this.handleLogin} id="adminForm">
-                        <input className="input" placeholder="username" value={this.props.userInfo.username} onChange={this.handleUserData} name="username" type="text" />
-                        <input className="input" placeholder="password" value={this.props.userInfo.password} onChange={this.handleUserData} name="password" type="password" />
+                        <input required className="input" placeholder="username" value={this.props.userInfo.username} onChange={this.handleUserData} name="username" type="text" />
+                        <input required className="input" placeholder="password" value={this.props.userInfo.password} onChange={this.handleUserData} name="password" type="password" />
                         <button id="adminLoginButton">Login </button>
                         <p id="errMsg"> {errMsg}</p>
                     </form>
@@ -146,27 +146,27 @@ class AdminPortal extends Component {
 
                             {/* //Composers List */}
                             Composers<br/>
-                            <input placeholder="Spearate Composers by Comma" value={this.state.Composers} onChange={this.handleChange} name="Composers" type="text" />
+                            <input required placeholder="Spearate Composers by Comma" value={this.state.Composers} onChange={this.handleChange} name="Composers" type="text" />
                             <br/>
                             {/* //lyricists Dropdown */}
                             Lyricists<br/>
-                            <input placeholder="Spearate Lyricists by Comma" value={this.state.Lyricists} onChange={this.handleChange} name="Lyricists" type="text" />
+                            <input required placeholder="Spearate Lyricists by Comma" value={this.state.Lyricists} onChange={this.handleChange} name="Lyricists" type="text" />
                             <br/>
                             {/* //Song Name */}
                             Song Name<br/>
-                            <input placeholder="Song Name" value={this.state.Song} onChange={this.handleChange} name="Song" type="text" />
+                            <input required placeholder="Song Name" value={this.state.Song} onChange={this.handleChange} name="Song" type="text" />
                             <br/>
                            {/* //Musical */}
                            Musical Name<br/>
-                            <input placeholder="Musical" value={this.state.Musical} onChange={this.handleChange} name="Musical" type="text" />
+                            <input required placeholder="Musical" value={this.state.Musical} onChange={this.handleChange} name="Musical" type="text" />
                             <br/>
                             {/* //Spotify Link */}
                             Spotify Link<br/>
-                            <input placeholder="Spotify Link" value={this.state.links.spotify} onChange={this.handleNestedChange} name="spotify" type="text" />
+                            <input required placeholder="Spotify Link" value={this.state.links.spotify} onChange={this.handleNestedChange} name="spotify" type="text" />
                             <br/>
                             {/* //Youtube Link */}
                             YoutTube Link<br/>
-                            <input placeholder="Youtube Link" value={this.state.links.youtube} onChange={this.handleNestedChange} name="youtube" type="text" />
+                            <input required placeholder="Youtube Link" value={this.state.links.youtube} onChange={this.handleNestedChange} name="youtube" type="text" />
                             <br/>
                             <button className="button"> Submit Song</button>
                             
@@ -175,7 +175,7 @@ class AdminPortal extends Component {
                         <NewAdmin />
                         <AdminList />
                         <br/>
-                        <h4><button className="button" onClick={this.handleLogout}> Logout </button> </h4>
+                        <h4 className="logout"><button className="button logout" onClick={this.handleLogout}> Logout </button> </h4>
                     </div>
                 }
             </div>

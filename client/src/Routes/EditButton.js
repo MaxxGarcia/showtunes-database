@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Ads from '../Ads.js';
 import { connect } from "riddl-js"
 import EditModal from "./EditModal"
 
@@ -18,7 +17,7 @@ class EditButton extends Component {
     render() {
         return (
             <div id="resultsDiv">
-                <button onClick={this.handleClick}> EDIT </button>
+                <button onClick={this.handleClick} className="button"> EDIT </button>
             {this.state.display && <EditModal givenSong={this.props.givenSong}/>}
             </div>
         )
