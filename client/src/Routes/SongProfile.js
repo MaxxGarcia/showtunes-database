@@ -47,6 +47,7 @@ class SongProfile extends Component {
 
             }).then(response => {
                 axios.post("/youtube", { q: `${this.state.Musical} ${this.state.Song}` }).then(response => {
+
                     let playerURL = `https://www.youtube.com/embed/${response.data}`
                     this.props.setGlobalState({
                         iframeY: <iframe title={response.data} className="iframeY" src={playerURL} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
@@ -70,29 +71,26 @@ class SongProfile extends Component {
                         Relase Date: {this.state.spotifyData && moment(this.state.spotifyData.data.tracks.items[0].album.release_date).format("MMM YYYY")} <br />
                         {this.state.Voice && this.state.Voice}</p>
                 </div>
-                <p className="please">Please select song from the album below</p>
                 <div id="songInfoInnerDiv">
-                    {this.props.iframeS}
-                    {this.props.iframeY}
+                    <div id="mediaDiv">
+                        <div id="spotifyDiv">
+                            <p id="please">Please select song from the album below</p>
+                            {this.props.iframeS}
+                        </div>
+                        <div id="youtubeDiv">
+                            {this.props.iframeY}
+                        </div>
+                    </div>
                     <div id="resultsLyricsDiv">
-                        <h3 id="lyricsH3">Lyrics</h3>
-                        <p>Naaaaats ingonyaaa ma bagithi babaaaaa</p>
-                        <p>There's vomit on his sweater already, Mom's psgetti</p>
                     </div>
                 </div>
-
-
                 <div id="popularityGraphDiv">
-                    <p>GRAPH of popularity  _/</p>
                 </div>
                 <div id="resultsLinksDiv">
                 </div>
                 <div id="resultsBodyDiv">
-                    <Ads />
-
                 </div>
                 <div id="buyingOptionsDiv">
-                    <p>Buying options</p>
                 </div>
                 <div id="recDiv1">
                     <h3>You may also be interested in:</h3>
