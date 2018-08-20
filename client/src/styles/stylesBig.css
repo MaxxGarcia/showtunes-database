@@ -20,24 +20,19 @@
         align-items: center;
     }
     #stickyDiv{
-        height: 203px;
-        width: 98%;
-        margin-left: 18px;
         position: sticky;
         top: -2px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
     }
     #searchBarDiv{
-        height: 173px;
-        width: 6px;
+        height: auto;
+        width: 100%;
         background: rgb(243, 251, 252);
         border-radius: 4px;
-        display: grid;
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-        grid-gap: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
     }
     .searchBarBtn{
         align-self: center;
@@ -348,7 +343,7 @@
     }
     #songInfoInnerDiv{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
@@ -363,5 +358,47 @@
         color: white;
         position: relative;
         bottom: 12px;
+    }
+
+
+    #songProfileDiv{
+        width: 100%;
+    }
+    #songInfoInnerDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #mediaDiv{
+        width: 100%;
+        margin: 3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .iframeS{
+        height: 404px;
+        width: 370px;
+    }
+    tbody{
+        font-size: 33px;
+    }
+    #please{
+        text-align: center;
+    }
+    #spotifyDiv{
+        margin: 5px;
+    }
+    .iframeY{
+        height: 300px;
+        width: 400px;
+    }
+    #youtubeDiv{
+        margin: 5px;
+    }
+    .d{
+        font-size: 44px;
     }
 }
