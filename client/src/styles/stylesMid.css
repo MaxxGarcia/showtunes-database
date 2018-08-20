@@ -366,5 +366,42 @@
         border: solid thin;
         border-radius: 3px;
         background-color: rgb(98, 153, 150)
+
+    #songProfileDiv{
+        width: 100%;
+    }
+    #songInfoInnerDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #mediaDiv{
+        width: 100%;
+        margin: 3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .iframeS{
+        height: 404px;
+        width: 370px;
+    }
+    tbody{
+        font-size: 23px;
+    }
+    #please{
+        text-align: center;
+    }
+    #spotifyDiv{
+        margin: 5px;
+    }
+    .iframeY{
+        height: 300px;
+        width: 400px;
+    }
+    #youtubeDiv{
+        margin: 5px;
     }
 }
