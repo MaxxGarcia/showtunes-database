@@ -15,8 +15,6 @@ let authOptions = {
         grant_type: 'client_credentials'
     }
 }
-var client_id = "0072e6df1c54421c8b33efca637ad1ec"
-var client_secret = "***REMOVED***"
 
 oauthRoutes.get("/", (req, res) => {
     axios(authOptions)
