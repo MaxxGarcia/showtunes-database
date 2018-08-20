@@ -11,7 +11,6 @@ const expressJWT = require("express-jwt");
 
 
 const PORT = process.env.PORT || 8080;
-const MONGODB_URI = 'mongodb://localhost:27017/showtunes';
 const app = express();
 
 app.use(bodyParser.json())
@@ -29,7 +28,7 @@ app.use(bodyParser.json())
     });
 
 
-mongoose.connect(process.env.MONGOLAB_GOLD_URI, { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
     .then((db) => console.log("DB is Online!"))
     .catch(err => console.log(err));
 
