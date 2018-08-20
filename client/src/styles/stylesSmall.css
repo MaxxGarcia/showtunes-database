@@ -1,0 +1,389 @@
+@media only screen and (max-width: 768px) {
+    * {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
+        
+    }
+    html{
+        background: linear-gradient(to bottom,rgb(243, 251, 252));
+        background-size: contain;
+    }
+    #ShoDatImg {
+        margin: 5px;
+        width: 94%
+    }
+    .headerDiv{
+        overflow: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #stickyDiv{
+        position: sticky;
+        top: -2px;
+        margin-bottom: 22px;
+    }
+    #searchBarDiv{
+        height: auto;
+        width: 100%;
+        background: rgb(243, 251, 252);
+        border-radius: 4px;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-gap: 2px;
+    }
+    .searchBarBtn{
+        height: auto;
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin: 0 2px;
+        border: 1px solid rgb(218, 235, 236);
+        border-radius: 4px;
+        background: linear-gradient(to right, rgb(204, 220, 221), rgb(218, 235, 236), rgb(204, 220, 221));
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .searchBarBtn:focus{
+        outline: 0;
+    }
+    .searchBarBtn:hover{
+        background: linear-gradient(to right, rgb(178, 0, 1), rgb(178, 0, 1));
+        color: rgb(218, 235, 236);
+        box-shadow: 2px 2px 4px rgb(98, 153, 150);
+        border-radius: 4px;
+    }
+    .navbar {
+        height: 77px;
+        margin-top: 9px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: sticky;
+        top: 58px;
+        /* position: relative;
+        z-index: 1; */
+    }
+    .navBtn{
+        position: relative;
+        bottom: 28px;
+        background-image: url("../images/vinylRecord.png");
+        background-size: cover;
+        background-color: transparent;
+        color: rgb(204, 220, 221);
+        height: 70px;
+        width: 70px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        line-height: 20px;
+        font-size: 11px;
+    }
+    .navBtn:hover{
+        transform: scale(1.04);
+        -webkit-transition: transform 0.2s ease-in-out;
+        box-shadow: 0px 2px px rgb(98, 153, 150);
+    }
+    .options{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .BIG{
+        width: 268px;
+        height: 300px;
+        overflow: scroll;
+        background: linear-gradient(to right, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
+        overflow: scroll;
+        box-shadow: 2px 2px 20px rgb(98, 153, 150);
+        border-radius: 4px;
+    }
+    .searchResultLink{
+        display: block;
+        text-align: center;
+    }
+    .searchResultLink:hover{
+        font-size: 18px;
+        text-shadow: 1px 1px black;
+    }
+    .resultLink{
+        width: 93%;
+        background: linear-gradient(to bottom, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
+    }
+
+    #aboutDiv{
+        margin: 8px;
+        display: flex;
+        background: linear-gradient(rgb(33, 71, 74), rgb(98, 153, 150));
+        color: rgb(218, 235, 236);
+        border: 1px solid rgb(33, 71, 74);
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #aboutImgDiv {
+        width: 32%
+    }
+    #aboutTextDiv {
+        width: 64%;
+    }
+    #staffImg {
+        width: 100%;
+        margin-right: 6px;
+    }
+    #homeBodyDiv {
+        display: flex;
+        flex-direction: row;
+    }
+    /* RESULTS */
+    #songInfoDiv {
+        margin: 4px;
+        width: 96%;
+        border: solid rgb(33, 71, 74) 2px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        background: linear-gradient(rgb(33, 71, 74), rgb(98, 153, 150));
+        color: rgb(218, 235, 236);
+    }
+    #songInfoP{
+        margin:  4px;
+        text-align: center;
+        font-size: 22px;
+        line-height: 33px;
+    }
+    #popularityGraphDiv {
+        background: white;
+    }
+    #resultsBodyDiv {
+        display: flex;
+        flex-direction: row;
+    }
+    .bodyDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .please{
+        text-align: center;
+        font-size: 14px;
+        width: 98%;
+        line-height: 32px;
+    }
+    #lyricsH3 {
+        text-align: center;
+    }
+    #resultsDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 9px;
+        margin-bottom: 32px;
+        text-align: center;
+        line-height: 28px;
+        background: linear-gradient(to right, rgb(212, 236, 236), rgb(229, 247, 248),rgb(212, 236, 236));
+        overflow: scroll;
+        box-shadow: 2px 2px 20px rgb(98, 153, 150);
+        border-radius: 4px;
+    }
+    #resultsLyricsDiv{
+        height: 188px;
+        margin: 2px;
+        font-size: 26px;
+        background: linear-gradient(to right, rgb(149, 186, 185), rgb(218, 235, 236));
+        color: rgb(98, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #recDiv1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #recDiv2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .recommendation {
+        margin: 3px;
+        height: 60px;
+        border: solid rgb(178, 0, 1) 3px;
+        display: grid;
+        grid-template-columns: 400px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    #updateText{
+        color: maroon
+    }
+
+    /* Advanced Search */
+    .searchWrapper{
+        margin: 22px 0px 22px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #advSearchForm{
+        height: 144px;
+        width: 100%;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        grid-gap: 4px;
+        background-image: url("../images/spotlights.png");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 2px 2px 20px black;
+
+    }
+    .input{
+        height: 22px;
+        width: 70%;
+        margin: 12px;
+        align-self: center;
+        border-radius: 4px;
+        box-shadow: 2px 2px 20px black;
+    }
+    #microphoneImg{
+        width: 144px;
+        height: auto;
+        align-self: center;
+        background-color: transparent!important;
+        position: relative;
+        bottom: 22px;
+    }
+    #microphoneImg:hover{
+        background: radial-gradient(gray, transparent, transparent);
+    }
+    #advSearchBtn{
+        color: white;
+        width: 80px;
+        height: 22px;
+        text-align: left;
+        background: transparent;
+        border: none;
+        position: relative;
+        bottom: 78px;
+        right: 26px;
+        transform: rotate(17deg);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        perspective: 1200px;
+        letter-spacing: 1px;
+    }
+    #p1{
+        font-size: 13.5px;
+    }
+    #p2{
+        font-size: 14.5px;
+    }
+    #p3{
+        font-size: 15.5px;
+    }
+    #p4{
+        font-size: 16.5px;
+    }
+    #p5{
+        font-size: 17.5px;
+    }
+    #p6{
+        font-size: 18.5px;
+    }
+    #advSearchBtn:hover{
+        color: rgb(149, 186, 185);
+    }
+
+    /* ADMIN PORTAL */
+    .adminWrapper{
+
+    }
+    #adminForm{
+        height: 144px;
+        width: 100%;
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+        grid-gap: 4px;
+        background-image: url("../images/conductor.jpg");
+        background-attachment: fixed;
+        background-position: 0, -400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 2px 2px 20px black;
+    }
+    .hiddenAdminContent{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+    .newSongForm{
+        grid-row-start: 1;
+        grid-row-end: 5;
+        border-right: solid black 1px;
+    }
+    .newAdminForm{
+        border-bottom: solid black 1px;
+        grid-row-start: 1;
+    }
+    .adminList{
+        grid-row-start: 2;
+        grid-row-end: 5;
+        border-bottom: solid black 1px;
+
+    }
+    .logout{
+        grid-row-start: 5;
+        border-top: solid black 1px;
+
+    }
+    .button{
+        border: solid thin;
+        border-radius: 3px;
+        background-color: rgb(98, 153, 150)
+    }
+    #adminLoginButton{
+        width: 32%;
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        bottom: 22px;
+        left: 12px;
+    }
+    #errMsg{
+        color: white;
+    }
+    #songInfoInnerDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #mediaDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .iframeS{
+        height: 404px;
+    }
+    #spotifyDiv{
+        margin: 5px;
+    }
+    #youtubeDiv{
+        margin: 5px;
+    }
+}
+
+
+
