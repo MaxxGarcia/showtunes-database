@@ -117,7 +117,7 @@ class AdvancedSearch extends Component {
                         })}
                     </datalist>
 
-                    <input placeholder={this.state.Voice}
+                    <input placeholder={this.state.Lyricist}
                         type="text" name="Lyricist" list="lyricistName"
                         value={this.state.Lyricist}
                         onChange={this.handleChange}
