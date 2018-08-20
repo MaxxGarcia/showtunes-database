@@ -1,5 +1,4 @@
 import React from 'react'
-import Ads from '../Ads.js'
 
 function Home() {
     return (

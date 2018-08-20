@@ -4,7 +4,8 @@
   "description": "Showtunes Database is a website for finding musicals to perform that fit your voice!",
   "main": "showtunes-server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,8 @@
     "ignore": [
       "client/*"
     ]
-  }
+  },
+  "engines": {
+    "node": "8.11.2"
+}
 }

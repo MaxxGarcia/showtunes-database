@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Ads from '../Ads.js';
 import { connect } from "riddl-js"
 import axios from "axios";
 import EditButton from "./EditButton"

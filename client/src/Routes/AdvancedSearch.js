@@ -3,7 +3,6 @@ import { connect } from "riddl-js";
 import microphone from "../images/microphone.png";
 import axios from "axios";
 import AdvancedResults from "./AdvancedResults";
-import Ads from "../Ads";
 
 class AdvancedSearch extends Component {
 

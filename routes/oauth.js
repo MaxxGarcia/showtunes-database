@@ -4,7 +4,6 @@ const axios = require("axios");
 const oauthRoutes = express.Router();
 
 var client_id = "0072e6df1c54421c8b33efca637ad1ec"
-var client_secret = "03ee415e96834b4e9501b9cb604974e7"
 
 let authOptions = {
     url: 'https://accounts.spotify.com/api/token',
