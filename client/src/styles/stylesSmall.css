@@ -343,6 +343,27 @@
     #errMsg{
         color: white;
     }
+    #songInfoInnerDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #mediaDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .iframeS{
+        height: 404px;
+    }
+    #spotifyDiv{
+        margin: 5px;
+    }
+    #youtubeDiv{
+        margin: 5px;
+    }
 }
 
 
