@@ -1,0 +1,39 @@
+{
+  "name": "showtunes-database",
+  "version": "1.0.0",
+  "description": "Showtunes Database is a website for finding musicals to perform that fit your voice!",
+  "main": "showtunes-server.js",
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxxGarcia/showtunes-database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxxGarcia/showtunes-database/issues"
+  },
+  "homepage": "https://github.com/MaxxGarcia/showtunes-database#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.7"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
+  },
+  "engines": {
+    "node": "8.11.2"
+}
+}
