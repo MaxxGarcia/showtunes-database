@@ -182,7 +182,6 @@
     }
     #resultsDiv{
 
-        width: 69%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -220,13 +219,16 @@
     }
     .recommendation {
         margin: 3px;
-        width: 1fr;
         height: 60px;
         border: solid rgb(178, 0, 1) 3px;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 400px;
+        text-align: center;
         justify-content: center;
         align-items: center;
+    }
+    #updateText{
+        color: maroon
     }
 
 
@@ -333,5 +335,36 @@
         color: white;
         position: relative;
         bottom: 12px;
+    }
+    .hiddenAdminContent{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+    .newSongForm{
+        grid-row-start: 1;
+        grid-row-end: 5;
+        border-right: solid black 1px;
+    }
+    .newAdminForm{
+        border-bottom: solid black 1px;
+        grid-row-start: 1;
+    }
+    .adminList{
+        grid-row-start: 2;
+        grid-row-end: 5;
+        border-bottom: solid black 1px;
+
+    }
+    .logout{
+        grid-row-start: 5;
+        border-top: solid black 1px;
+
+    }
+    .button{
+        border: solid thin;
+        border-radius: 3px;
+        background-color: rgb(98, 153, 150)
     }
 }

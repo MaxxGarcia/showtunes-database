@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const songSchema = new Schema({
-    songName: {type: String, require: true},
-    voice: {type: String, require: true},
-    musical: {type: String, require: true},
+    Song: {type: String, require: true},
+    Voice: {type: String, require: true},
+    Musical: {type: String, require: true},
     anthBook: String,
     Composer: [String],
     Lyricist: [String],
@@ -21,7 +21,6 @@ const songSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
-        // required: true
     }
 });
 

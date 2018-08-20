@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "riddl-js";
 import { Link, withRouter } from "react-router-dom";
-import { isArray } from 'util';
 
 export const sanitizeHref = endpoint => {
     if(Array.isArray(endpoint)){return endpoint}
@@ -40,7 +39,6 @@ class SearchBar extends Component {
         })
     }
     render() {
-        let randomSong = this.props.songData[Math.floor(Math.random() * this.props.songData.length)];
         return (
             <div id="stickyDiv">
                 <div id="searchBarDiv">
