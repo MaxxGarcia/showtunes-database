@@ -26,7 +26,8 @@ const globalState = {
         lyricist: '',
         show: ''
     },
-    iframe: "",
+    iframeS: "",
+    iframeY: "",
     songData: [],
     composers: [],
     lyricists: [],

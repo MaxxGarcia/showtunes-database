@@ -17,6 +17,7 @@ app.use(bodyParser.json())
     .use("/private/admin", require("./routes/admin"))
     .use('/songs', require('./routes/songs'))
     .use("/oauth", require("./routes/oauth"))
+    .use("/youtube", require("./routes/youtube"))
     .use("/private/addadmin", require("./routes/addAdmin"))
     .use("/login", require("./routes/login"))
     .use((err, req, res, next) => {
