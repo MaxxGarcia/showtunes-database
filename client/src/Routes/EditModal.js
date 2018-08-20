@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Ads from '../Ads.js';
 import { connect } from "riddl-js"
 import axios from "axios";
 
@@ -24,10 +23,11 @@ class EditModal extends Component {
         })
         this.props.setGlobalState({ songAxios })
         let updatedSong = this.state.song;
-        delete updatedSong.spotifyData
-        updatedSong
-        songAxios.put(`/private/admin/${updatedSong._id}`, updatedSong).then(response => {
+        console.log(updatedSong)
+        let songid = this.state.song._id
+        songAxios.put(`/private/admin/${songid}`, updatedSong).then(response => {
             console.log(response.data)
+            document.getElementById("updateText").innerHTML = "Update Successful";
         }).catch(err => console.error(err))
     }
     handleSwitch(e) {
@@ -37,7 +37,9 @@ class EditModal extends Component {
         currentInput.name = e.target.value
     }
     handleChange(e) {
-        this.setState(prevState => ({ song: { ...prevState.song, [e.target.name]: e.target.value } }))
+        let name = e.target.name
+        let value = e.target.value
+        this.setState(prevState => ({ song: { ...prevState.song, [name]: value } }))
     }
     render() {
         return (
@@ -54,6 +56,7 @@ class EditModal extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <input placeholder={this.state.song.Song} value={this.state.song.Song} name="Song" type="text" onChange={this.handleChange} id="theInput" />
                     <button> Update </button>
+                    <div id="updateText"></div>
                 </form>
             </div>
         )

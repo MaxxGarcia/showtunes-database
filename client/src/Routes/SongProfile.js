@@ -3,12 +3,14 @@ import Ads from '../Ads.js';
 import { connect } from "riddl-js"
 import axios from "axios";
 import EditButton from "./EditButton"
-
+import moment from "moment"
+import { Link } from "react-router-dom";
 
 class SongProfile extends Component {
     constructor() {
         super()
         this.state = {}
+        this.reloadpage = this.reloadpage.bind(this);
     }
     componentDidMount() {
         axios.get(`/songs/${this.props.match.params.searchTerm}`)
@@ -27,24 +29,37 @@ class SongProfile extends Component {
                                     spotifyData: { ...response }
                                 }
                             })
-                            let albumId = `https://open.spotify.com/embed?uri=spotify:album:${response.data.tracks.items[0].album.id}`;
+                            let song;
+                            response.data.tracks.items.map(item => {
+                                if (item.album.name === this.state.Musical) {
+                                    return song = item.album.id
+                                } else {
+                                    return song = response.data.tracks.items[0].album.id
+                                }
+                            })
+                            let albumId = `https://open.spotify.com/embed?uri=spotify:album:${song}`;
                             this.props.setGlobalState({
                                 iframeS: <iframe title={response.data} src={albumId} className="iframeS" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                             })
                         })
                         .catch(err => { console.error(err) })
                 })
-                
+
             }).then(response => {
-                axios.post("/youtube",{q: this.state.Song}).then( response => {
+                axios.post("/youtube", { q: `${this.state.Musical} ${this.state.Song}` }).then(response => {
                     let playerURL = `https://www.youtube.com/embed/${response.data}`
-                    this.props.setGlobalState({    
-                        iframeY: <iframe className="iframeY" src={playerURL} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                    this.props.setGlobalState({
+                        iframeY: <iframe title={response.data} className="iframeY" src={playerURL} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                     })
                 })
             })
     }
+    reloadpage() {
+        console.log("test")
+        window.location.reload()
+    }
     render() {
+        let counter = 0;
         return (
             <div id="songProfileDiv">
 
@@ -52,7 +67,7 @@ class SongProfile extends Component {
                     {this.props.authenticate.isAuthenticated === true && <EditButton givenSong={this.state} />}
                     <p id="songInfoP">Song: {this.state.Song && this.state.Song} <br />
                         Show: {this.state.Musical && this.state.Musical} <br />
-                        Relase Date: {this.state.spotifyData && this.state.spotifyData.data.tracks.items[0].album.release_date} <br />
+                        Relase Date: {this.state.spotifyData && moment(this.state.spotifyData.data.tracks.items[0].album.release_date).format("MMM YYYY")} <br />
                         {this.state.Voice && this.state.Voice}</p>
                 </div>
                 <p className="please">Please select song from the album below</p>
@@ -81,13 +96,24 @@ class SongProfile extends Component {
                 </div>
                 <div id="recDiv1">
                     <h3>You may also be interested in:</h3>
-                    <div id="recDiv2">
-                        <div className="recommendation">Recommended Song</div>
-                        <div className="recommendation">Recommended Song</div>
-                        <div className="recommendation">Recommended Song</div>
-                        <div className="recommendation">Recommended Song</div>
-                    </div>
+                    {this.props.songData.map((item, i) => {
+                        if (item.Voice === this.state.Voice && item.Composer.join(",") === this.state.Composer.join(",") && item.Lyricist.join(",") === this.state.Lyricist.join(",") && item.Musical === this.state.Musical && item.Song !== this.state.Song && counter < 4) {
+                            counter++
+                            return <Link onClick={this.reloadpage} to={`/songprofile/${item._id}`} key={item + i}> <div className="recommendation" >{item.Song}<br />{item.Musical}</div></Link>
+                        } else if ((item.Voice === this.state.Voice && item.Composer.join(",") === this.state.Composer.join(",") && item.Lyricist.join(",") === this.state.Lyricist.join(",") && item.Song !== this.state.Song && counter < 4)) {
+                            counter++
+                            return <Link onClick={this.reloadpage} to={`/songprofile/${item._id}`} key={item + i}> <div className="recommendation" >{item.Song}<br />{item.Musical}</div></Link>
+                        } else if ((item.Voice === this.state.Voice && item.Composer.join(",") === this.state.Composer.join(",") && item.Song !== this.state.Song && counter < 4)) {
+                            counter++
+                            return <Link onClick={this.reloadpage} to={`/songprofile/${item._id}`} key={item + i}> <div className="recommendation" >{item.Song}<br />{item.Musical}</div></Link>
+                        } else if ((item.Voice === this.state.Voice && item.Song !== this.state.Song && counter < 4)) {
+                            counter++
+                            return <Link onClick={this.reloadpage} to={`/songprofile/${item._id}`} key={item + i}> <div className="recommendation" >{item.Song}<br />{item.Musical}</div></Link>
+                        }
+                        return null
+                    })}
                 </div>
+                <br/>
             </div>
         )
     }

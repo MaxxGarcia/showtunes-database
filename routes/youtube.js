@@ -19,7 +19,6 @@ youtubeRoutes.post("/", (req, res) => {
     }
     axios(authOptions)
         .then(response => {
-            console.log(response)
             res.send(response.data.items[0].id.videoId)
         })
         .catch(err => console.log(err))
