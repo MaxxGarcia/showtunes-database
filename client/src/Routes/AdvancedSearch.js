@@ -149,7 +149,7 @@ class AdvancedSearch extends Component {
                     <p id="p6">H</p>
                 </button>
                 <button onClick={this.clearInputs}> Clear </button>
-                <Ads />
+                {/* <Ads /> */}
                 <AdvancedResults />
             </div>
         );
