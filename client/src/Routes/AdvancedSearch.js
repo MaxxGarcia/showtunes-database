@@ -3,7 +3,6 @@ import { connect } from "riddl-js";
 import microphone from "../images/microphone.png";
 import axios from "axios";
 import AdvancedResults from "./AdvancedResults";
-import Ads from "../Ads";
 
 class AdvancedSearch extends Component {
 
@@ -149,7 +148,7 @@ class AdvancedSearch extends Component {
                     <p id="p6">H</p>
                 </button>
                 <button onClick={this.clearInputs}> Clear </button>
-                <Ads />
+                {/* <Ads /> */}
                 <AdvancedResults />
             </div>
         );

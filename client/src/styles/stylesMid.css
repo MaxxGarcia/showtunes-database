@@ -182,7 +182,6 @@
     }
     #resultsDiv{
 
-        width: 69%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -220,13 +219,16 @@
     }
     .recommendation {
         margin: 3px;
-        width: 1fr;
         height: 60px;
         border: solid rgb(178, 0, 1) 3px;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 400px;
+        text-align: center;
         justify-content: center;
         align-items: center;
+    }
+    #updateText{
+        color: maroon
     }
 
 
@@ -336,5 +338,73 @@
     }
     #songMusical{
         letter-spacing: 3.5px;
+    }
+    .hiddenAdminContent{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+    .newSongForm{
+        grid-row-start: 1;
+        grid-row-end: 5;
+        border-right: solid black 1px;
+    }
+    .newAdminForm{
+        border-bottom: solid black 1px;
+        grid-row-start: 1;
+    }
+    .adminList{
+        grid-row-start: 2;
+        grid-row-end: 5;
+        border-bottom: solid black 1px;
+
+    }
+    .logout{
+        grid-row-start: 5;
+        border-top: solid black 1px;
+
+    }
+    .button{
+        border: solid thin;
+        border-radius: 3px;
+        background-color: rgb(98, 153, 150)
+    }
+    #songProfileDiv{
+        width: 100%;
+    }
+    #songInfoInnerDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #mediaDiv{
+        width: 100%;
+        margin: 3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .iframeS{
+        height: 404px;
+        width: 370px;
+    }
+    tbody{
+        font-size: 23px;
+    }
+    #please{
+        text-align: center;
+    }
+    #spotifyDiv{
+        margin: 5px;
+    }
+    .iframeY{
+        height: 300px;
+        width: 400px;
+    }
+    #youtubeDiv{
+        margin: 5px;
     }
 }

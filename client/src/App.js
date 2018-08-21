@@ -35,8 +35,8 @@ class App extends Component {
       allLyricists.sort();
       allMusicals.sort();
       allVoices.sort();
-      response.data.sort(item => {
-        
+      response.data.sort((a, b) => {
+       return a.Song.localeCompare(b.Song)
       })
       this.props.setGlobalState({
         songData: response.data,
