@@ -343,6 +343,9 @@
     #errMsg{
         color: white;
     }
+    #songMusical{
+        letter-spacing: 3.5px;
+    }
 }
 
 

@@ -364,4 +364,7 @@
         position: relative;
         bottom: 12px;
     }
+    #songMusical{
+        letter-spacing: 3.5px;
+    }
 }

@@ -69,7 +69,10 @@ class App extends Component {
     const { location: { pathname } } = this.props;
     return (
       <div className="appWrapper">
-        <img src={titleImg} id="ShoDatImg" alt="Showtunes Database" />
+        <img src={titleImg} 
+             id="ShoDatImg" 
+             alt="Showtunes Database" 
+             onClick={()=> {this.props.history.push('./')}}/>
 
         {pathname === "/" && (
           <div id="aboutDiv">
@@ -79,8 +82,9 @@ class App extends Component {
             <div id="aboutTextDiv">
               <p id="aboutText">
                 Looking for your next audition song?<br />
-                The bran-new Showtune Database makes finding the perfect song easy.  Spend less time hunting for your song and more rehearsing!
+                The brand-new Showtune Database makes finding the perfect song easy.  Spend less time hunting for your song and more rehearsing!
                     </p>
+                    
             </div>
           </div>
         )}
