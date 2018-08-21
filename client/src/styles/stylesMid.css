@@ -336,6 +336,9 @@
         position: relative;
         bottom: 12px;
     }
+    #songMusical{
+        letter-spacing: 3.5px;
+    }
     .hiddenAdminContent{
         display: grid;
         grid-gap: 10px;

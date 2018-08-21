@@ -363,6 +363,9 @@
     #errMsg{
         color: white;
     }
+    #songMusical{
+        letter-spacing: 3.5px;
+    }
     #songInfoInnerDiv{
         display: flex;
         flex-direction: column;

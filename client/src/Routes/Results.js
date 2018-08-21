@@ -13,7 +13,7 @@ class Results extends Component {
         const { searchType, searchTerm } = this.props.match.params;
         return (
             <div className="resultsDiv">
-                <b>Song - Musical</b>
+            <b id="songMusical">Song - Musical</b>
                 {this.props.songData.map((song, i) => {
                     if (sanitizeHref(song[searchType]) === searchTerm) {
                         return (
