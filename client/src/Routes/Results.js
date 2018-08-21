@@ -17,8 +17,8 @@ class Results extends Component {
                 {this.props.songData.map((song, i) => {
                     if (sanitizeHref(song[searchType]) === searchTerm) {
                         return (
-                            <Link to={`/songprofile/${song._id}`} key={song + i} className="resultWrapper">
-                                <div>{song.Song} <b>-</b> {song.Musical} </div>
+                            <Link to={`/songprofile/${song._id}`} key={song + i} >
+                                <div className="resultWrapper">{song.Song} <b>-</b> {song.Musical} </div>
                             </Link>
 
                         )
@@ -27,7 +27,7 @@ class Results extends Component {
                         if (song[searchType].some(item => item === searchTerm)) {
                             return (
                                 <Link to={`/songprofile/${song._id}`} key={song + i} className="resultWrapper">
-                                <div>{song.Song} <b>-</b> {song.Musical} </div>
+                                    <div>{song.Song} <b>-</b> {song.Musical} </div>
 
                                 </Link>
                             )
@@ -36,7 +36,7 @@ class Results extends Component {
                     return null
                 })
                 }
-                <br/>
+                <br />
             </div>
         )
     }

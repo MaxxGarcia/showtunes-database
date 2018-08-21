@@ -4,9 +4,7 @@ const bodyParser = require('body-parser');
 const path = require("path")
 require("dotenv").config()
 
-
 //Auth
-require("dotenv").config();
 const expressJWT = require("express-jwt");
 
 
@@ -26,7 +24,6 @@ app.use(bodyParser.json())
     .use((err, req, res, next) => {
         res.status(400).send(err)
     });
-
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
     .then((db) => console.log("DB is Online!"))
