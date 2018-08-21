@@ -1,7 +1,7 @@
 import axios from "axios";
 import { connect } from "riddl-js"
 import React, { Component } from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, Link } from 'react-router-dom';
 //ROUTES
 import AdvancedSearch from "./Routes/AdvancedSearch";
 import songProfile from "./Routes/SongProfile"
@@ -67,27 +67,30 @@ class App extends Component {
   }
   render() {
     const { location: { pathname } } = this.props;
+    console.log(this.props.history)
     return (
       <div className="appWrapper">
-        <img src={titleImg} 
-             id="ShoDatImg" 
-             alt="Showtunes Database" 
-             onClick={()=> {this.props.history.push('./')}}/>
 
-        {pathname === "/" && (
-          <div id="aboutDiv">
-            <div id="aboutImgDiv">
-              <img src={staff} id="staffImg" alt="staff" />
+      <div id="allTop">
+        <Link to={'/'} id="titleImgDiv">        
+            <img src={titleImg} 
+              id="ShoDatImg" 
+              alt="Showtunes Database" ></img>
+          </Link>
+          {pathname === "/" && (
+            <div id="aboutDiv">
+              <div id="aboutImgDiv">
+                <img src={staff} id="staffImg" alt="staff" />
+              </div>
+              <div id="aboutTextDiv">
+                <p id="aboutText">
+                  Looking for your next audition song?<br />
+                  The brand-new Showtune Database makes finding the perfect song easy.  Spend less time hunting for your song and more rehearsing!
+                </p>
+              </div>
             </div>
-            <div id="aboutTextDiv">
-              <p id="aboutText">
-                Looking for your next audition song?<br />
-                The brand-new Showtune Database makes finding the perfect song easy.  Spend less time hunting for your song and more rehearsing!
-                    </p>
-                    
-            </div>
-          </div>
-        )}
+          )}
+      </div>
 
         {pathname !== "/AdvancedSearch" && (
           <SearchBar />

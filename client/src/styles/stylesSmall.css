@@ -362,10 +362,9 @@
     #errMsg{
         color: white;
     }
-<<<<<<< HEAD
     #songMusical{
         letter-spacing: 3.5px;
-=======
+    }
     #songInfoInnerDiv{
         display: flex;
         flex-direction: column;
@@ -386,7 +385,6 @@
     }
     #youtubeDiv{
         margin: 5px;
->>>>>>> 008d806f6b0ac25da6c34fd65142182a0310e15e
     }
 }
 
