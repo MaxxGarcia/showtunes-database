@@ -5,7 +5,6 @@ import axios from "axios";
 import AdvancedResults from "./AdvancedResults";
 
 class AdvancedSearch extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -46,19 +45,15 @@ class AdvancedSearch extends Component {
     handleSubmit(e) {
         e.preventDefault(e)
         let newQueryObject = this.state
-        let queryObject = this.props.queryObject
-        for (let key in newQueryObject) {
-            if (queryObject[key] === "") {
-                delete queryObject[key]
-            }
-        }
         let newurl = `?`
         for (let key in newQueryObject) {
-            if (newQueryObject[key] !== "") {
+            if (newQueryObject[key] !== "" && newQueryObject[key] !== undefined && newQueryObject[key] !== "Voice" && newQueryObject[key] !== "Composer" && newQueryObject[key] !== "Lyricist" && newQueryObject[key] !== "Musical") {
                 newurl = newurl + `${key}=${newQueryObject[key]}&`
             }
         }
-        newurl = newurl.substring(0, newurl.length - 1)
+        if (newurl.length > 1) {
+            newurl = newurl.substring(0, newurl.length - 1)
+        }
         this.props.history.push(newurl)
         this.handleHandle()
     }
@@ -94,49 +89,37 @@ class AdvancedSearch extends Component {
         return (
             <div className="searchWrapper">
                 <form id="advSearchForm">
-                    <input placeholder={this.state.Voice}
-                        type="text" name="Voice" list="voiceName"
-                        value={this.state.Voice}
-                        onChange={this.handleChange}
-                        className="input" />
-                    <datalist id="voiceName">
+                    <select onChange={this.handleChange} name="Voice" className="input" >
+                        <option selected hidden value={this.state.Voice} > {this.state.Voice} </option>
                         {voices.map((voice, i) => {
                             return <option value={voice} key={voice + i}> {voice} </option>
                         })}
-                    </datalist>
+                    </select>
 
+                    <select onChange={this.handleChange} id="composerName" name="Composer" className="input" size="1" >
+                        <option selected hidden value={this.state.Composer} > {this.state.Composer} </option>
 
-                    <input placeholder={this.state.Composer} type="text" name="Composer" list="composerName"
-                        value={this.state.Composer}
-                        onChange={this.handleChange}
-                        className="input" />
-                    <datalist id="composerName">
                         {composers.map((composer, i) => {
                             return <option value={composer} key={composer + i}> {composer} </option>
                         })}
-                    </datalist>
+                    </select>
 
-                    <input placeholder={this.state.Lyricist}
-                        type="text" name="Lyricist" list="lyricistName"
-                        value={this.state.Lyricist}
-                        onChange={this.handleChange}
-                        className="input" />
-                    <datalist id="lyricistName">
+                    <select onChange={this.handleChange} id="lyricistName" name="Lyricist" className="input">
+                        <option selected hidden value={this.state.Lyricist} > {this.state.Lyricist} </option>
+
                         {lyricists.map((lyricist, i) => {
                             return <option value={lyricist} key={lyricist + i}> {lyricist} </option>
                         })}
-                    </datalist>
+                    </select>
 
-                    <input placeholder={this.state.Musical}
-                        type="text" name="Musical" list="showName"
-                        value={this.state.Musical}
-                        onChange={this.handleChange}
-                        className="input" />
-                    <datalist id="showName">
-                        {musicals.map((show, i) => {
-                            return <option value={show} key={show + i}> {show} </option>
+                    <select onChange={this.handleChange} id="showName" name="Musical" className="input">
+                        <option selected hidden value={this.state.Musical} > {this.state.Musical} </option>
+
+                        {musicals.map((musical, i) => {
+                            return <option value={musical} key={musical + i}> {musical} </option>
                         })}
-                    </datalist>
+                    </select>
+
                 </form>
                 <img src={microphone} id="microphoneImg" alt="microphone" />
                 <button id="advSearchBtn" onClick={this.handleSubmit}>
@@ -147,7 +130,7 @@ class AdvancedSearch extends Component {
                     <p id="p5">C</p>
                     <p id="p6">H</p>
                 </button>
-                <button onClick={this.clearInputs}> Clear </button>
+                <button type="reset" value="reset" form="advSearchForm" onClick={this.clearInputs}> clear </button>
                 {/* <Ads /> */}
                 <AdvancedResults />
             </div>
