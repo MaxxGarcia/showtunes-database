@@ -36,15 +36,15 @@ adminRoutes.route("/:id")
         })
     })
     .delete((req, res) => {
-        Showtunes.findOneAndDelete(req.params.id, (err) => {
+        Showtunes.findByIdAndDelete(req.params.id, (err) => {
             return err ? res.status(500).send(err) : res.status(200).send("THE ROUGE SHOWTUNE HAS BEEN ELIMINATED")
         })
     })
 
 adminRoutes.route("/delete/:id")
     .delete((req, res) => {
-        Admin.findOneAndDelete(req.params._id, (err) => {
-            return err ? res.status(500).send(err) : res.status(200).send("THE ROUGE ADMIN HAS BEEN ELIMINATED")
+        Admin.findByIdAndDelete(req.params.id, (err) => {
+            return err ? res.status(500).send(err) : res.status(200).send(`THE ROUGE ADMIN HAS BEEN ELIMINATED ${req.params.id}`)
         })
     })
 module.exports = adminRoutes;

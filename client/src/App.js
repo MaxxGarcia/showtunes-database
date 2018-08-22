@@ -67,7 +67,6 @@ class App extends Component {
   }
   render() {
     const { location: { pathname } } = this.props;
-    console.log(this.props.history)
     return (
       <div className="appWrapper">
 

@@ -18,7 +18,7 @@ class AdminList extends Component {
     handleClick(e){
         console.log(e.target.id)
         const { songAxios } = this.props
-        songAxios.delete("/private/admin/delete/:id").then(response => {console.log(response)})
+        songAxios.delete(`/private/admin/delete/${e.target.id}`).then(response => {console.log(response)})
     }
     render() {
         const {adminList} = this.state
