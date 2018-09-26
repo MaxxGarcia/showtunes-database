@@ -162,11 +162,11 @@ class AdminPortal extends Component {
                             <br/>
                             {/* //Spotify Link */}
                             Spotify Link<br/>
-                            <input required placeholder="Spotify Link" value={this.state.links.spotify} onChange={this.handleNestedChange} name="spotify" type="text" />
+                            <input placeholder="Spotify Link" value={this.state.links.spotify} onChange={this.handleNestedChange} name="spotify" type="text" />
                             <br/>
                             {/* //Youtube Link */}
                             YoutTube Link<br/>
-                            <input required placeholder="Youtube Link" value={this.state.links.youtube} onChange={this.handleNestedChange} name="youtube" type="text" />
+                            <input placeholder="Youtube Link" value={this.state.links.youtube} onChange={this.handleNestedChange} name="youtube" type="text" />
                             <br/>
                             <button className="button"> Submit Song</button>
                             
