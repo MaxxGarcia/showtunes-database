@@ -107,6 +107,7 @@
         box-shadow: 2px 2px 20px rgb(98, 153, 150);
         border-radius: 4px;
         column-count: 2;
+        overflow-y: scroll;
 
     }
     .searchResultLink{
